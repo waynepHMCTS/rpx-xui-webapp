@@ -126,7 +126,7 @@ variable "allow_config_mutations" {
   default = "1"
 }
 
-// variable "ilbIp"{}
+variable "ilbIp"{}
 
 variable "tenant_id" {}
 
