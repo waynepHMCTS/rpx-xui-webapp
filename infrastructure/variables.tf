@@ -24,22 +24,22 @@ variable "env" {
 }
 
 // health service urls
-variable "health_ccd_component_api" {}
-variable "health_ccd_data_api" {}
-variable "health_documents_api" {}
-variable "health_en_anno_api" {}
-variable "health_terms_and_conditions_api" {}
+// variable "health_ccd_component_api" {}
+// variable "health_ccd_data_api" {}
+// variable "health_documents_api" {}
+// variable "health_en_anno_api" {}
+// variable "health_terms_and_conditions_api" {}
 
 // service urls
-variable "services_ccd_component_api" {}
-variable "services_ccd_data_store_api" {}
-variable "services_documents_api" {}
-variable "services_em_anno_api" {}
-variable "services_idam_api_url" {}
-variable "services_idam_login_url" {}
-variable "services_payments_url" {}
-variable "services_s2s" {}
-variable "services_terms_and_conditions" {}
+// variable "services_ccd_component_api" {}
+// variable "services_ccd_data_store_api" {}
+// variable "services_documents_api" {}
+// variable "services_em_anno_api" {}
+// variable "services_idam_api_url" {}
+// variable "services_idam_login_url" {}
+// variable "services_payments_url" {}
+// variable "services_s2s" {}
+// variable "services_terms_and_conditions" {}
 
 variable "mc_http_proxy" {
   default = "http://172.16.0.7:8080"
@@ -126,7 +126,7 @@ variable "allow_config_mutations" {
   default = "1"
 }
 
-variable "ilbIp"{}
+// variable "ilbIp"{}
 
 variable "tenant_id" {}
 
