@@ -1,5 +1,7 @@
 variable "product" {}
 
+variable "component" {}
+
 variable "location" {
   default = "UK South"
 }
