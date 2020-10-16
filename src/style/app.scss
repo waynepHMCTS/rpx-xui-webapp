@@ -348,6 +348,7 @@ select:focus,
 button:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+  z-index: 1;
 }
 
 .stay-signed-in-button {

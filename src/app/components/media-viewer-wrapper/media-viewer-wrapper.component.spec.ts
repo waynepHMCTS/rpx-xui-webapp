@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MediaViewerWrapperComponent } from './media-viewer-wrapper.component';
+import { MediaViewerToolbarComponent } from '../media-viewer-toolbar/media-viewer-toolbar.component';
 import { DocumentUrlPipe } from '@hmcts/ccd-case-ui-toolkit/dist/shared/components/palette/document/document-url.pipe';
 import { MediaViewerModule } from '@hmcts/media-viewer';
 import { WindowService } from '@hmcts/ccd-case-ui-toolkit/dist/shared/services/window';
@@ -36,6 +37,7 @@ describe('MediaViewerWrapperComponent', () => {
             ],
             declarations: [
                 MediaViewerWrapperComponent,
+                MediaViewerToolbarComponent,
                 DocumentUrlPipe
             ],
             providers: [

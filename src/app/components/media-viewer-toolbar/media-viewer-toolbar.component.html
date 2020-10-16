@@ -1,0 +1,69 @@
+<div class="jui-toolbar">
+  <div class="mv-toolbar__container">
+    <!-- The mvToolbarMain div contains all toolbar buttons except the "More options" button. This allows for calculation of the available space to display buttons -->
+    <div id="mvToolbarMain" class="mv-toolbar-main" #mvToolbarMain>
+      <ng-container *ngTemplateOutlet="menuItems"></ng-container>
+    </div>
+    <!-- The mvToolbarMoreOptions div contains just the "More options" toolbar button. The space it occupies (if visible) is excluded from the toolbar space available calculation -->
+    <div id="mvToolbarMoreOptions" class="mv-toolbar-more-options">
+      <button id="mvMoreOptionsBtn" class="jui-toolbar__button jui-toolbar__menu-button--more-options"
+              [class.dropdown-xui-toolbar-button-hidden]="false" aria-pressed="false" (click)="isDropdownMenuOpen = !isDropdownMenuOpen"
+              cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+        More options
+      </button>
+      <!-- This template displays the overlay content for the dropdown menu and is connected to the "More options" button -->
+      <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isDropdownMenuOpen"
+      [cdkConnectedOverlayPositions]="dropdownMenuPositions">
+        <div class="dropdown-menu" #dropdownMenu>
+          <ng-container *ngTemplateOutlet="menuItems"></ng-container>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+<ng-template #menuItems>
+  <button id="mvIndexBtn" class="jui-toolbar__button jui-toolbar__button--items" aria-pressed="false" (click)="toggleSideBar()">Index</button>
+  <button id="mvDrawBtn" class="jui-toolbar__button jui-toolbar__menu-button--draw" [class.toggled]="toolbarEvents.drawModeSubject | async" aria-pressed="false" (click)="onClickDrawToggle()">Draw a box</button>
+  <button id="mvHighlightBtn" class="jui-toolbar__button jui-toolbar__menu-button--highlight" [class.toggled]="toolbarEvents.highlightModeSubject | async" aria-pressed="false" (click)="onClickHighlightToggle()">Highlight</button>
+
+  <div class="jui-toolbar__button" aria-pressed="false">Page
+    <button id="mvDownBtn" role="button" class="jui-toolbar__menu-button--down button-image" (click)="increasePageNumber()"></button>
+    <button id="mvUpBtn" role="button" class="jui-toolbar__menu-button--up button-image" (click)="decreasePageNumber()"></button>
+    <input type="number" id="pageNumber" class="hmcts-toolbar-input govuk-input--width-2" title="Page Number" value="1" size="4" min="1"
+        [value]="pageNumber" aria-label="page number"
+        tabindex="0" data-l10n-id="page" (change)="onPageNumberInputChange(pageNumberInput.value)" #pageNumberInput>
+  </div>
+  <div class="jui-toolbar__button" aria-pressed="false">Zoom
+    <button id="mvMinusBtn" class="jui-toolbar__menu-button--zoom-out button-image" (click)="stepZoom(-0.1)"></button>
+    <select id="scaleSelect" class="hmcts-toolbar-select" title="Zoom" tabindex="0" data-l10n-id="zoom" (change)="zoom($event.target.value)" aria-label="zoom">
+      <option #zoomSelect id="customScaleOption" title="" [value]="toolbarEvents.zoomValueSubject.value">{{(toolbarEvents.zoomValueSubject.value) * 100 | number: '1.0-0'}}%</option>
+      <option title="" value="0.1" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 10 }'>10%</option>
+      <option title="" value="0.25" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 25 }'>25%</option>
+      <option title="" value="0.5" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 50 }'>50%</option>
+      <option title="" value="0.75" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 75 }'>75%</option>
+      <option title="" value="1" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 100 }'>100%</option>
+      <option title="" value="1.25" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 125 }'>125%</option>
+      <option title="" value="1.5" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 150 }'>150%</option>
+      <option title="" value="2.5" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 250 }'>250%</option>
+      <option title="" value="3" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 300 }'>300%</option>
+      <option title="" value="5" data-l10n-id="page_scale_percent"
+              data-l10n-args='{ "scale": 500 }'>500%</option>
+    </select>
+    <button id="mvPlusBtn" class="jui-toolbar__menu-button--zoom-in button-image" (click)="stepZoom(0.1)"></button>
+  </div>
+  <button id="mvRotateBtn" class="jui-toolbar__button jui-toolbar__menu-button--rotate" aria-pressed="false" (click)="rotate(90)">Rotate</button>
+
+  <button id="mvDownloadBtn" class="jui-toolbar__button jui-toolbar__menu-button--download" aria-pressed="false" (click)="downloadFile()">Download</button>
+  <button id="mvPrintBtn" class="jui-toolbar__button jui-toolbar__menu-button--printer" aria-pressed="false" (click)="printFile()">Print</button>
+  <button id="mvSearchBtn" class="jui-toolbar__button jui-toolbar__menu-button--search" aria-pressed="false" (click)="toggleSearchBar()">Search</button>
+</ng-template>

@@ -1,3 +1,4 @@
+import { OverlayModule } from '@angular/cdk/overlay';
 import { NgModule } from '@angular/core';
 
 import * as fromAppComponents from '../components';
@@ -19,7 +20,7 @@ import { ExuiCommonLibModule } from '@hmcts/rpx-xui-common-lib';
  * FormsModule, CommonModule, ReactiveForms etc..
  */
 @NgModule( {
-  imports: [RouterModule, CommonModule, MediaViewerModule, ExuiCommonLibModule.forChild()],
+  imports: [RouterModule, CommonModule, MediaViewerModule, ExuiCommonLibModule.forChild(), OverlayModule],
   declarations: [
     ...fromAppComponents.components,
     ...fromAppContainers.containers,
