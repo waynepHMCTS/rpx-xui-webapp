@@ -4,16 +4,17 @@
     <div id="mvToolbarMain" class="mv-toolbar-main" #mvToolbarMain>
       <ng-container *ngTemplateOutlet="menuItems"></ng-container>
     </div>
-    <!-- The mvToolbarMoreOptions div contains just the "More options" toolbar button. The space it occupies (if visible) is excluded from the toolbar space available calculation -->
+    <!-- The mvToolbarMoreOptions div contains the "More options" toolbar button (and the overlay template for the dropdown menu).
+      The space occupied by the button (if visible) is excluded from the toolbar space available calculation -->
     <div id="mvToolbarMoreOptions" class="mv-toolbar-more-options">
       <button id="mvMoreOptionsBtn" class="jui-toolbar__button jui-toolbar__menu-button--more-options"
-              [class.dropdown-xui-toolbar-button-hidden]="false" aria-pressed="false" (click)="isDropdownMenuOpen = !isDropdownMenuOpen"
+              [class.jui-toolbar__menu-button--more-options__hidden]="!toolbarHasHiddenButtons()" aria-pressed="false" (click)="isDropdownMenuOpen = !isDropdownMenuOpen"
               cdkOverlayOrigin #trigger="cdkOverlayOrigin">
         More options
       </button>
       <!-- This template displays the overlay content for the dropdown menu and is connected to the "More options" button -->
       <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isDropdownMenuOpen"
-      [cdkConnectedOverlayPositions]="dropdownMenuPositions">
+        [cdkConnectedOverlayPositions]="dropdownMenuPositions">
         <div class="dropdown-menu" #dropdownMenu>
           <ng-container *ngTemplateOutlet="menuItems"></ng-container>
         </div>
@@ -23,18 +24,34 @@
 </div>
 
 <ng-template #menuItems>
-  <button id="mvIndexBtn" class="jui-toolbar__button jui-toolbar__button--items" aria-pressed="false" (click)="toggleSideBar()">Index</button>
-  <button id="mvDrawBtn" class="jui-toolbar__button jui-toolbar__menu-button--draw" [class.toggled]="toolbarEvents.drawModeSubject | async" aria-pressed="false" (click)="onClickDrawToggle()">Draw a box</button>
-  <button id="mvHighlightBtn" class="jui-toolbar__button jui-toolbar__menu-button--highlight" [class.toggled]="toolbarEvents.highlightModeSubject | async" aria-pressed="false" (click)="onClickHighlightToggle()">Highlight</button>
+  <button id="mvIndexBtn" #mvIndexBtn class="jui-toolbar__button jui-toolbar__button--items"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvIndexBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvIndexBtn.id)"
+    aria-pressed="false" (click)="toggleSideBar()">
+    Index
+  </button>
+  <button id="mvDrawBtn" #mvDrawBtn class="jui-toolbar__button jui-toolbar__menu-button--draw"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvDrawBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvDrawBtn.id)"
+    [class.toggled]="toolbarEvents.drawModeSubject | async" aria-pressed="false" (click)="onClickDrawToggle()">
+    Draw a box
+  </button>
+  <button id="mvHighlightBtn" #mvHighlightBtn class="jui-toolbar__button jui-toolbar__menu-button--highlight"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvHighlightBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvHighlightBtn.id)"
+    [class.toggled]="toolbarEvents.highlightModeSubject | async" aria-pressed="false" (click)="onClickHighlightToggle()">
+    Highlight
+  </button>
 
-  <div class="jui-toolbar__button" aria-pressed="false">Page
+  <div id="mvPageBtn" #mvPageBtn class="jui-toolbar__button" aria-pressed="false"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvPageBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvPageBtn.id)">
+    Page
     <button id="mvDownBtn" role="button" class="jui-toolbar__menu-button--down button-image" (click)="increasePageNumber()"></button>
     <button id="mvUpBtn" role="button" class="jui-toolbar__menu-button--up button-image" (click)="decreasePageNumber()"></button>
     <input type="number" id="pageNumber" class="hmcts-toolbar-input govuk-input--width-2" title="Page Number" value="1" size="4" min="1"
         [value]="pageNumber" aria-label="page number"
         tabindex="0" data-l10n-id="page" (change)="onPageNumberInputChange(pageNumberInput.value)" #pageNumberInput>
   </div>
-  <div class="jui-toolbar__button" aria-pressed="false">Zoom
+  <div id="mvZoomBtn" #mvZoomBtn class="jui-toolbar__button" aria-pressed="false"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvZoomBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvZoomBtn.id)">
+    Zoom
     <button id="mvMinusBtn" class="jui-toolbar__menu-button--zoom-out button-image" (click)="stepZoom(-0.1)"></button>
     <select id="scaleSelect" class="hmcts-toolbar-select" title="Zoom" tabindex="0" data-l10n-id="zoom" (change)="zoom($event.target.value)" aria-label="zoom">
       <option #zoomSelect id="customScaleOption" title="" [value]="toolbarEvents.zoomValueSubject.value">{{(toolbarEvents.zoomValueSubject.value) * 100 | number: '1.0-0'}}%</option>
@@ -61,9 +78,46 @@
     </select>
     <button id="mvPlusBtn" class="jui-toolbar__menu-button--zoom-in button-image" (click)="stepZoom(0.1)"></button>
   </div>
-  <button id="mvRotateBtn" class="jui-toolbar__button jui-toolbar__menu-button--rotate" aria-pressed="false" (click)="rotate(90)">Rotate</button>
+  <div id="mvRotateBtn" #mvRotateBtn class="jui-toolbar__button jui-toolbar__menu-button--rotate" aria-pressed="false"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvRotateBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvRotateBtn.id)">
+    <button id="mvRotateLeftBtn" class="jui-toolbar__menu-button--rotate_left button-image" (click)="rotate(-90)"></button>
+    <button id="mvRotateRightBtn" class="jui-toolbar__menu-button--rotate_right button-image" (click)="rotate(90)"></button>
+    Rotate
+  </div>
+  <button id="mvSearchBtn" #mvSearchBtn class="jui-toolbar__button jui-toolbar__menu-button--search"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvSearchBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvSearchBtn.id)"
+    aria-pressed="false" (click)="toggleSearchBar()">
+    Search
+  </button>
+  <button id="mvPresentBtn" #mvPresentBtn class="jui-toolbar__button jui-toolbar__menu-button--present"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvPresentBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvPresentBtn.id)"
+    aria-pressed="false" (click)="togglePresentBar()">
+    Present
+  </button>
+  <button id="mvRedactBtn" #mvRedactBtn class="jui-toolbar__button jui-toolbar__menu-button--marker"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvRedactBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvRedactBtn.id)"
+    aria-pressed="false" (click)="toggleRedactBar()">
+    Redact
+  </button>
+  <button id="mvGrabBtn" #mvGrabBtn class="jui-toolbar__button jui-toolbar__menu-button--grab"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvGrabBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvGrabBtn.id)"
+    aria-pressed="false" (click)="toggleGrabNDrag()">
+    Grab and drag
+  </button>
 
-  <button id="mvDownloadBtn" class="jui-toolbar__button jui-toolbar__menu-button--download" aria-pressed="false" (click)="downloadFile()">Download</button>
-  <button id="mvPrintBtn" class="jui-toolbar__button jui-toolbar__menu-button--printer" aria-pressed="false" (click)="printFile()">Print</button>
-  <button id="mvSearchBtn" class="jui-toolbar__button jui-toolbar__menu-button--search" aria-pressed="false" (click)="toggleSearchBar()">Search</button>
+  <button id="mvDownloadBtn" #mvDownloadBtn class="jui-toolbar__button jui-toolbar__menu-button--download"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvDownloadBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvDownloadBtn.id)"
+    aria-pressed="false" (click)="downloadFile()">
+    Download
+  </button>
+  <button id="mvPrintBtn" #mvPrintBtn class="jui-toolbar__button jui-toolbar__menu-button--printer"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvPrintBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvPrintBtn.id)"
+    aria-pressed="false" (click)="printFile()">
+    Print
+  </button>
+  <button id="mvCommentsBtn" #mvCommentsBtn class="jui-toolbar__button jui-toolbar__menu-button--comments"
+    [class.button-hidden-on-toolbar]="!isToolbarButtonVisible(mvCommentsBtn.id)" [class.button-hidden-on-dropdown]="isToolbarButtonVisible(mvCommentsBtn.id)"
+    aria-pressed="false" (click)="toggleCommentsPanel()">
+    Comments
+  </button>
 </ng-template>
