@@ -207,9 +207,7 @@ export class MediaViewerToolbarComponent implements OnInit, OnDestroy, AfterView
   }
 
   public toggleCommentsPanel() {
-    // Not available in media-viewer Version 2.3.10 but currently unable to upgrade due to build failure from Version 2.3.11 onwards
-    // (see change made in media-viewer package.json for Version 2.3.11, regarding ngx-chips)
-    // this.toolbarEvents.toggleCommentsPanel(!this.toolbarEvents.commentsPanelVisible.getValue());
+    this.toolbarEvents.toggleCommentsPanel(!this.toolbarEvents.commentsPanelVisible.getValue());
   }
 
   public togglePresentBar() {

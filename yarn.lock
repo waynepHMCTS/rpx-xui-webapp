@@ -431,16 +431,15 @@
   resolved "https://registry.yarnpkg.com/@hmcts/frontend/-/frontend-0.0.39-alpha.tgz#782d4a4698dae040dd72b26711f04a8d8299d25c"
   integrity sha512-M1364rFLuvktYz5+jVjJ5ZmNUx0/SgoAvH3RsIaT2wFqFf92emuiRyXqax5oSEC5kM9Jpw0rcxEcRbBJWMoglg==
 
-"@hmcts/media-viewer@2.3.10":
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/@hmcts/media-viewer/-/media-viewer-2.3.10.tgz#f5e97c253b5cfd815fb0b9783ff066a88fb92305"
-  integrity sha512-YR9o8Iy3/T20nZGqqPUeqsjYd0GVi0mSoD88AqEI3Luph7vxyfSdmLms6VH8AO6Apw0u7daVGunybDm72clBlw==
+"@hmcts/media-viewer@2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@hmcts/media-viewer/-/media-viewer-2.5.1.tgz#53c257285aac3ffc6e675fbfc2ef0c4dfe5cb1a0"
+  integrity sha512-6NxPzBpHjZNSVnhgg3u+QjEmKxHR5VxBOjaWNDM9vxzOejgy9bwrwUIBFb/X6JbOIgLEj2DLmSpTPXYTBsgeCw==
   dependencies:
     "@swimlane/ngx-datatable" "^16.0.2"
+    angular-tree-component "^8.5.6"
     hammerjs "^2.0.8"
     mutable-div "0.0.11"
-    ng2-material-dropdown "0.10.1"
-    ngx-chips "^2.1.0"
     pdfjs-dist "2.0.943"
     socket.io-client "^2.3.0"
     tslib "^1.9.0"
@@ -1577,6 +1576,14 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+
+angular-tree-component@^8.5.6:
+  version "8.5.6"
+  resolved "https://registry.yarnpkg.com/angular-tree-component/-/angular-tree-component-8.5.6.tgz#b32ea769e17b8e4462b31b5b67c17269a7295fa5"
+  integrity sha512-cxNem6872diZz9kIGqrjSJbKt0P3WSq9wTqZIeVJ8zsddI4Y6ShAVZlZNXUMRyJq246c9pJ6JJEAOzKVLk9xgA==
+  dependencies:
+    lodash "^4.17.11"
+    mobx "^4.15.1"
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -8160,6 +8167,11 @@ mkdirp@~1.0.3:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.3.tgz#4cf2e30ad45959dddea53ad97d518b6c8205e1ea"
   integrity sha512-6uCP4Qc0sWsgMLy1EOqqS/3rjDHOEnsStVr/4vtAIK2Y5i2kA7lFFejYrpIyiN9w0pYf4ckeCYT9f1r1P9KX5g==
 
+mobx@^4.15.1:
+  version "4.15.7"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-4.15.7.tgz#933281268c3b4658b6cf2526e872cf78ea48ab95"
+  integrity sha512-X4uQvuf2zYKHVO5kRT5Utmr+J9fDnRgxWWnSqJ4oiccPTQU38YG+/O3nPmOhUy4jeHexl7XJJpWDBgEnEfp+8w==
+
 mocha@^5.0.5:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.2.0.tgz#6d8ae508f59167f940f2b5b3c4a612ae50c90ae6"
@@ -8377,13 +8389,6 @@ ng2-material-dropdown@0.10.1:
   dependencies:
     tslib "^1.9.0"
 
-ng2-material-dropdown@0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/ng2-material-dropdown/-/ng2-material-dropdown-0.11.0.tgz#27a402ef3cbdcaf6791ef4cfd4b257e31db7546f"
-  integrity sha512-wptBo09qKecY0QPTProAThrc4A3ajJTcHE9LTpCG5XZZUhXLBzhnGK8OW33TN8A+K/jqcs7OB74ppYJiqs3nhQ==
-  dependencies:
-    tslib "^1.9.0"
-
 ngrx-store-freeze@^0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/ngrx-store-freeze/-/ngrx-store-freeze-0.2.4.tgz#146687cdf7e21244eb9003c7e883f2125847076c"
@@ -8391,13 +8396,13 @@ ngrx-store-freeze@^0.2.4:
   dependencies:
     deep-freeze-strict "^1.1.1"
 
-ngx-chips@^2.1.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/ngx-chips/-/ngx-chips-2.2.1.tgz#266cc6b83f4b497f56bc43e323bcf6e9b2afc9f7"
-  integrity sha512-XruhoR/kCYBkLYelxtLYNR+4mP5TmVnVfW0wc/ylZmFvph5q4JqjqAtWYq5r8oBTDgUo+HsP4jByIZnVK5pw5A==
+ngx-chips@1.9.8:
+  version "1.9.8"
+  resolved "https://registry.yarnpkg.com/ngx-chips/-/ngx-chips-1.9.8.tgz#44c8be9456dc228524454428e70d8a49d7fbd9df"
+  integrity sha512-gU8hXByb0QcNLbDi5KuLsEgfuIoaKDDMHWdUPwtnY4gjGGEsg5afUo++raeKPHHc1igp/kYTghmI0xzOpMkqQg==
   dependencies:
-    ng2-material-dropdown "0.11.0"
-    tslib "^1.10.0"
+    ng2-material-dropdown "0.10.1"
+    tslib "^1.9.0"
 
 ngx-cookie@^4.1.2:
   version "4.1.2"
@@ -12031,11 +12036,6 @@ ts-node@~7.0.0:
     mkdirp "^0.5.1"
     source-map-support "^0.5.6"
     yn "^2.0.0"
-
-tslib@^1.10.0:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
-  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
