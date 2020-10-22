@@ -18,19 +18,6 @@
   z-index: 0;
 }
 
-.jui-toolbar::after {
-  content: "";
-  display: block;
-  height: 1px;
-  left: 50%;
-  margin-top: 0;
-  margin-left: -50%;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  box-shadow: 0px 0px 3px 2px #bebebe;
-}
-
 .mv-toolbar__container {
   border-left: 1px solid #dee0e2;
   border-right: 1px solid #dee0e2;
@@ -51,6 +38,11 @@
 .mv-toolbar-main {
   // This has the effect of grabbing any extra space, thus positioning the "More options" button at the far right of the toolbar
   margin-right: auto;
+
+  // Used to hide a button on the toolbar
+  .button-hidden-on-toolbar {
+    display: none;
+  }
 }
 
 .mv-toolbar-more-options {
@@ -95,7 +87,7 @@
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.25 ;
+  line-height: 1.25;
   box-sizing: border-box;
   max-width: 100%;
   height: 30px;
@@ -176,7 +168,57 @@
 }
 
 .jui-toolbar__menu-button--rotate {
+  height: 30px;
+  padding-top: 10px;
+}
+
+.jui-toolbar__menu-button--rotate_left {
+  background-image: url(/assets/media-viewer/icon-casefile-rotate-left.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 19px;
+  background-position: 0px 50%;
+  padding-left: 25px;
+  font-weight: 400;
+}
+
+.jui-toolbar__menu-button--rotate_right {
   background-image: url(/assets/media-viewer/icon-casefile-rotate.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 19px;
+  background-position: 0px 50%;
+  padding-left: 20px;
+  font-weight: 400;
+}
+
+.jui-toolbar__menu-button--search {
+  background-image: url(/assets/media-viewer/search.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 19px;
+  background-position: 15px 50%;
+  padding-left: 45px;
+  font-weight: 400;
+}
+
+.jui-toolbar__menu-button--present {
+  background-image: url(/assets/media-viewer/present.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 19px;
+  background-position: 15px 50%;
+  padding-left: 45px;
+  font-weight: 400;
+}
+
+.jui-toolbar__menu-button--marker {
+  background-image: url(/assets/media-viewer/marker-pen.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 19px;
+  background-position: 15px 50%;
+  padding-left: 45px;
+  font-weight: 400;
+}
+
+.jui-toolbar__menu-button--grab {
+  background-image: url(/assets/media-viewer/grab_n_drag.svg);
   background-repeat: no-repeat;
   background-size: 16px 19px;
   background-position: 15px 50%;
@@ -202,8 +244,8 @@
   font-weight: 400;
 }
 
-.jui-toolbar__menu-button--search {
-  background-image: url(/assets/media-viewer/search.svg);
+.jui-toolbar__menu-button--comments {
+  background-image: url(/assets/media-viewer/icon-casefile-comments.svg);
   background-repeat: no-repeat;
   background-size: 16px 19px;
   background-position: 15px 50%;
@@ -212,7 +254,18 @@
 }
 
 .jui-toolbar__menu-button--more-options {
+  background-image: url(/assets/media-viewer/more.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 19px;
+  background-position: 15px 50%;
+  padding-left: 45px;
+  font-weight: 400;
   border-left: 1px solid #dee0e2;
+  border-right: none;
+}
+
+.jui-toolbar__menu-button--more-options__hidden {
+  display: none;
 }
 
 .button-image {
@@ -230,10 +283,6 @@
   }
 }
 
-.dropdown-xui-toolbar-button-hidden {
-  display: none;
-}
-
 .dropdown-menu {
   background-color: #ffffff;
   display: flex;
@@ -241,4 +290,9 @@
   border-left: 1px solid #dee0e2;
   // Each toolbar button already has a border-right, so no need to add one here
   border-bottom: 1px solid #dee0e2;
+
+  // Used to hide a button on the dropdown menu
+  .button-hidden-on-dropdown {
+    display: none;
+  }
 }
