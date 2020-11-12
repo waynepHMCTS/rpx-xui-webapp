@@ -2,15 +2,17 @@ import { Pact } from '@pact-foundation/pact'
 import { assert } from 'chai'
 import * as getPort from 'get-port'
 import * as path from 'path'
+
 import { EnhancedRequest } from '../../../lib/models'
 import { handleTaskGet } from '../../../workAllocation/taskService'
+import { Task } from './../../../workAllocation/interfaces/task'
 
 describe("Work Allocation API", () => {
 
     let MOCK_SERVER_PORT
     let workallocationUrl
     let provider
-    const mockResponse = {
+    const mockResponse: { task: Task } = {
       "task": {
         "assignee": "string",
         "auto_assigned": true,
@@ -32,7 +34,7 @@ describe("Work Allocation API", () => {
         "task_system": "string",
         "task_title": "string",
         "type": "string",
-      },
+      }
     }
 
     before(async () => {
