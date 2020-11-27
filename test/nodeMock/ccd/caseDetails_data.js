@@ -19,10 +19,88 @@ module.exports = {
     "tabs": [
         {
             "id": "Judge",
-            "label": "Judge",
+            "label": "test To Paul",
             "order": 15,
             "fields": [
                 {
+                    "id": "applicantDetails",
+                    "label": "Collection fileds with Dates: ",
+                    "hidden": null,
+                    "metadata": false,
+                    "hint_text": null,
+                    "value": [
+                        {
+                            "id": "1234",
+                            "value": "2020-02-01"
+                        },
+                        {
+                            "id": "23456",
+                            "value": "2020-02-02"
+                        }
+                    ],
+                    "field_type": {
+                        "id": "Collection",
+                        "type": "Collection",
+                        "min": null,
+                        "max": null,
+                        "regular_expression": null,
+                        "fixed_list_items": [],
+                        "complex_fields": [],
+                        "collection_field_type": {
+                            "id": "Date",
+                            "type": "Date",
+                            "min": null,
+                            "max": null,
+                            "regular_expression": null,
+                            "fixed_list_items": [],
+                            "complex_fields": [],
+                            "collection_field_type": null 
+                        }
+                    },
+                    "validation_expr": null,
+                    "security_label": "PUBLIC",
+                    "order": 1,
+                    "formatted_value": null,
+                    "display_context": null,
+                    "display_context_parameter": null,
+                    "show_condition": null,
+                    "show_summary_change_option": null,
+                    "show_summary_content_option": null,
+                    "retain_hidden_value": null,
+                    "acls": [
+                        {
+                            "role": "caseworker-divorce-financialremedy",
+                            "create": true,
+                            "read": true,
+                            "update": false,
+                            "delete": false
+                        },
+                        {
+                            "role": "caseworker-divorce-financialremedy-courtadmin",
+                            "create": true,
+                            "read": true,
+                            "update": true,
+                            "delete": false
+                        },
+                        {
+                            "role": "caseworker-divorce-financialremedy-solicitor",
+                            "create": true,
+                            "read": true,
+                            "update": true,
+                            "delete": false
+                        },
+                        {
+                            "role": "caseworker-divorce-financialremedy-judiciary",
+                            "create": true,
+                            "read": true,
+                            "update": false,
+                            "delete": false
+                        }
+                    ],
+                    "default_value": null
+                },
+                {
+
                     "id": "divorceCaseNumber",
                     "label": "Divorce Case Number",
                     "hidden": null,

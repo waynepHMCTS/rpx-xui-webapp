@@ -414,7 +414,7 @@ describe('CCD casefields, retain_hidden_field setting', function () {
             grandchildText: { display: false, retainValue: true },
         } 
     ].forEach(scenario => {
-        it(`Deep complex field : ${scenario.testName}`, async function () {
+        it.only(`Deep complex field : ${scenario.testName}`, async function () {
             // CCD case config setup start 
 
             const caseConfig = new CCDCaseConfig('TEST_CaseType', 'Test case type hidden field retain value', 'test description');
@@ -501,13 +501,16 @@ describe('CCD casefields, retain_hidden_field setting', function () {
             //when parent Objec displayed
             if(scenario.parentComplex.display){
                 expect(caseEventSubmitRequestBody.data).to.have.property(parentComplexField.id);
+                expect(caseEventSubmitRequestBody.data[parentComplexField.id][childTextShowCondition.id]).to.not.equal(null);
+
                 //child test displayed
                 if (scenario.childText.display){
                     expect(caseEventSubmitRequestBody.data[parentComplexField.id]).to.have.property(childText.id);
                     expect(caseEventSubmitRequestBody.data[parentComplexField.id][childText.id]).to.equal("Child text value new");
                 //child text hidden
                 }else if(scenario.childText.retainValue){
-                    expect(caseEventSubmitRequestBody.data[parentComplexField.id]).to.not.have.property(childText.id); 
+                    expect(caseEventSubmitRequestBody.data[parentComplexField.id]).to.have.property(childText.id);
+                    expect(caseEventSubmitRequestBody.data[parentComplexField.id][childText.id]).to.equal("Child Text value old"); 
                 }else{
                     expect(caseEventSubmitRequestBody.data[parentComplexField.id]).to.have.property(childText.id);  
                     expect(caseEventSubmitRequestBody.data[parentComplexField.id][childText.id]).to.equal(null);  
@@ -522,14 +525,17 @@ describe('CCD casefields, retain_hidden_field setting', function () {
                         expect(caseEventSubmitRequestBody.data[parentComplexField.id][childComplex.id][grandchildText.id]).to.equal("Grand Child text value new");
                     //grand child Text hidden
                     } else if (scenario.grandchildText.retainValue){
-                        expect(caseEventSubmitRequestBody.data[parentComplexField.id][childComplex.id]).to.not.have.property(grandchildText.id); 
+                        expect(caseEventSubmitRequestBody.data[parentComplexField.id][childComplex.id]).to.have.property(grandchildText.id);
+                        expect(caseEventSubmitRequestBody.data[parentComplexField.id][childText.id]).to.equal("Grand Child text value old"); 
+ 
                     }else{
                         expect(caseEventSubmitRequestBody.data[parentComplexField.id][childComplex.id]).to.have.property(grandchildText.id); 
                         expect(caseEventSubmitRequestBody.data[parentComplexField.id][childText.id][grandchildText.id]).to.equal(null);
                     }
                     //childCompled filed hidden
                 } else if (scenario.childComplex.retainValue) {
-                    expect(caseEventSubmitRequestBody.data[parentComplexField.id]).to.not.have.property(childComplex.id);
+                    expect(caseEventSubmitRequestBody.data[parentComplexField.id]).to.have.property(childComplex.id);
+
                 } else {
                     expect(caseEventSubmitRequestBody.data[parentComplexField.id]).to.have.property(childComplex.id);
                     expect(validateAllValuesNullInObject(caseEventSubmitRequestBody.data[parentComplexField.id][childComplex.id]), "object has non null values").to.be.true;
@@ -537,7 +543,7 @@ describe('CCD casefields, retain_hidden_field setting', function () {
 
             //when parent object hidden
             } else if (scenario.parentComplex.retainValue){
-                expect(caseEventSubmitRequestBody.data).to.not.have.property(parentComplexField.id);
+                expect(caseEventSubmitRequestBody.data).to.have.property(parentComplexField.id);
             }else{
                 expect(caseEventSubmitRequestBody.data).to.have.property(parentComplexField.id);
                 expect(validateAllValuesNullInObject(caseEventSubmitRequestBody.data[parentComplexField.id]), "object has non null values").to.be.true; 
@@ -587,5 +593,6 @@ describe('CCD casefields, retain_hidden_field setting', function () {
         }
         return true;
     }
+
 
 });
