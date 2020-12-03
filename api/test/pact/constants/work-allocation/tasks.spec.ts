@@ -185,9 +185,9 @@ export const TASKS_SORTED_BY = {
 
 export const UNAVAILABLE_TASKS = {
   caseReference: 400,
-  caseName: 403,
-  caseCategory: 500,
-  location: [ ...SORTED_BY_LOCATION ],
+  caseName: 401,
+  caseCategory: 403,
+  location: 500,
   taskName: [ ...SORTED_BY_TASK ],
   dueDate: [ ...SORTED_BY_DUE_DATE ]
 };

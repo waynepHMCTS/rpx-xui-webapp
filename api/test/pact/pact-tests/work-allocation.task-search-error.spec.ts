@@ -32,22 +32,24 @@ describe('Work Allocation API', () => {
 
   // Create an end point for each group of sorted tasks.
   for (const key in UNAVAILABLE_TASKS) {
-    let body: any;
-    let status = UNAVAILABLE_TASKS[key];
-    if (typeof(status) !== 'number') {
-      body = { tasks: [ ...UNAVAILABLE_TASKS[key] ] };
-      status = 200;
-    }
     // Do one for each of ascending and descending.
     for (const order of ['ascending', 'descending']) {
+      let status = UNAVAILABLE_TASKS[key];
       const operator = 'unavailable'
       const request: SearchTaskRequest = {
         search_parameters: [
           { key, operator, values: [ order ] },
         ]
       };
-      if (order === 'descending' && body) {
-        body.tasks = [ ...body.tasks.reverse() ];
+      let body: any;
+      let tasks: any[];
+      if (typeof(status) !== 'number') {
+        tasks = [ ...status ];
+        if (order === 'descending') {
+          tasks = [ ...tasks.reverse() ];
+        }
+        body = { tasks };
+        status = 200;
       }
       describe(`when requested to search for ${operator} tasks in ${order} order of ${key}`, () => {
         before(() =>
