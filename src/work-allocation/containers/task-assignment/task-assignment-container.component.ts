@@ -32,7 +32,7 @@ export class TaskAssignmentContainerComponent implements OnInit {
     private readonly router: Router
   ) {}
 
-  
+
 
   /**
    * Mock TaskFieldConfig[]
@@ -101,31 +101,39 @@ export class TaskAssignmentContainerComponent implements OnInit {
     this.tasks = [ task ];
   }
 
-  public reAssign(): void {
-    this.router.navigate(['/tasks'], {fragment: this.manageLink});
-    if (!this.caseworker) {
-      this.showProblem = true;
-      this.errorTitle = "There is a problem";
-      this.errorDesc = "You must select a name";
-      return;
-    }
-    const assignee: Assignee = {
-      id: this.caseworker.idamId,
-      userName: `${this.caseworker.firstName} ${this.caseworker.lastName}`
-    };
-    console.log('Reassigning, but using a fake assignee for the PACT stub', assignee);
-    this.taskService.assignTask(this.tasks[0].id, assignee).subscribe(
-      () => {console.log('assignment was successful: received a 200 status');
-      this.location.back();
-    }, error => {
-      const navigateTo = WorkAllocationUtils.handleTaskAssignErrorResult(error.status)
-      if (navigateTo === "/tasks") {
-        this.router.navigate([navigateTo], {state: {badRequest: 'true'}})
-      }
-      this.router.navigate([navigateTo])});
-  }
+  // public reAssign(): void {
+  //   this.router.navigate(['/tasks'], {fragment: this.manageLink});
+  //   if (!this.caseworker) {
+  //     this.showProblem = true;
+  //     this.errorTitle = "There is a problem";
+  //     this.errorDesc = "You must select a name";
+  //     return;
+  //   }
+  //   const assignee: Assignee = {
+  //     id: this.caseworker.idamId,
+  //     userName: `${this.caseworker.firstName} ${this.caseworker.lastName}`
+  //   };
+  //   console.log('Reassigning, but using a fake assignee for the PACT stub', assignee);
+  //
+  //   this.taskService.assignTask(this.tasks[0].id, assignee).subscribe(
+  //     () => {
+  //       console.log('assignment was successful: received a 200 status');
+  //     this.location.back();
+  //   }, error => {
+  //     const navigateTo = WorkAllocationUtils.handleTaskAssignErrorResult(error.status)
+  //     if (navigateTo === "/tasks") {
+  //       this.router.navigate([navigateTo], {state: {badRequest: 'true'}})
+  //     }
+  //     this.router.navigate([navigateTo])});
+  // }
 
   public onCaseworkerChanged(caseworker: Caseworker): void {
+
     this.caseworker = caseworker;
+  }
+
+  public shouldReturnFalse(): boolean {
+
+    return false;
   }
 }
