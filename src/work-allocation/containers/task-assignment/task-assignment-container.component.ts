@@ -89,12 +89,15 @@ export class TaskAssignmentContainerComponent implements OnInit {
     fields: this.fields,
   };
   public readonly manageLink = 'manage_5678901234567890';
+
+
+
   public ngOnInit(): void {
     // Set up the default sorting.
-    this.sortedBy = {
-      fieldName: this.taskServiceConfig.defaultSortFieldName,
-      order: this.taskServiceConfig.defaultSortDirection
-    };
+    // this.sortedBy = {
+    //   fieldName: this.taskServiceConfig.defaultSortFieldName,
+    //   order: this.taskServiceConfig.defaultSortDirection
+    // };
 
     // Get the task from the route, which will have been put there by the resolver.
     const { task } = this.route.snapshot.data.task;

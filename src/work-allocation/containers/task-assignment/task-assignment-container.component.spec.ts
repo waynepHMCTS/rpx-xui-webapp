@@ -135,7 +135,11 @@ describe('TaskAssignmentContainerComponent', () => {
   });
 
   it('should allow changing the caseworker', () => {
-    expect(component.showManage).toBe(true);
+    expect(component.showManage).toBe(false);
+  });
+
+  it('should allow changing the caseworker', () => {
+    expect(component.shouldReturnFalse()).toBe(false);
   });
 
   // xit('should allow changing the caseworker', async () => {
