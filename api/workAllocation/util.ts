@@ -1,43 +1,43 @@
 import { ActionViews, TASK_ACTIONS } from './constants/actions';
 
 export function prepareGetTaskUrl(baseUrl: string, taskId: string): string {
-  return `${baseUrl}/task/${taskId}`
+  return `${baseUrl}/task/${taskId}`;
 }
 
 export function preparePostTaskUrlAction(baseUrl: string, taskId: string, action: string): string {
-  return `${baseUrl}/task/${taskId}/${action}`
+  return `${baseUrl}/task/${taskId}/${action}`;
 }
 
 export function prepareSearchTaskUrl(baseUrl: string) {
-  return `${baseUrl}/task`
+  return `${baseUrl}/task`;
 }
 
 export function prepareGetLocationByIdUrl(baseUrl: string, locationId: string): string {
-  return `${baseUrl}/location/${locationId}`
+  return `${baseUrl}/location/${locationId}`;
 }
 
 export function prepareGetLocationsUrl(baseUrl: string): string {
-  return `${baseUrl}/location`
+  return `${baseUrl}/location`;
 }
 
 export function prepareCaseWorkerUrl(baseUrl: string) {
-  return `${baseUrl}/caseworker`
+  return `${baseUrl}/caseworker`;
 }
 
 export function prepareCaseWorkerSearchUrl(baseUrl: string) {
-  return `${baseUrl}/caseworker/search`
+  return `${baseUrl}/caseworker/search`;
 }
 
 export function prepareCaseWorkerForLocation(baseUrl: string, locationId: string) {
-  return `${baseUrl}/caseworker/location/${locationId}`
+  return `${baseUrl}/caseworker/location/${locationId}`;
 }
 
 export function prepareCaseWorkerForService(baseUrl: string, serviceId: string) {
-  return `${baseUrl}/caseworker/service/${serviceId}`
+  return `${baseUrl}/caseworker/service/${serviceId}`;
 }
 
 export function prepareCaseWorkerForLocationAndService(baseUrl: string, locationId: string, serviceId: string) {
-  return `${baseUrl}/caseworker/location/${locationId}/service/${serviceId}`
+  return `${baseUrl}/caseworker/location/${locationId}/service/${serviceId}`;
 }
 
 /**

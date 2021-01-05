@@ -21,7 +21,7 @@ import {
   prepareSearchTaskUrl,
 } from './util';
 
-export const baseUrl: string = 'http://localhost:8080'
+export const baseUrl: string = 'http://localhost:8080';
 
 /**
  * getTask
@@ -29,13 +29,13 @@ export const baseUrl: string = 'http://localhost:8080'
 export async function getTask(req: EnhancedRequest, res: Response, next: NextFunction) {
 
   try {
-    const getTaskPath: string = prepareGetTaskUrl(baseUrl, req.params.taskId)
+    const getTaskPath: string = prepareGetTaskUrl(baseUrl, req.params.taskId);
 
-    const jsonResponse = await handleTaskGet(getTaskPath, req)
-    res.status(200)
-    res.send(jsonResponse)
+    const jsonResponse = await handleTaskGet(getTaskPath, req);
+    res.status(200);
+    res.send(jsonResponse);
   } catch (error) {
-    next(error)
+    next(error);
   }
 }
 
@@ -67,13 +67,13 @@ export async function searchTask(req: EnhancedRequest, res: Response, next: Next
 export async function postTaskAction(req: EnhancedRequest, res: Response, next: NextFunction) {
 
   try {
-    const getTaskPath: string = preparePostTaskUrlAction(baseUrl, req.params.taskId, req.params.action)
+    const getTaskPath: string = preparePostTaskUrlAction(baseUrl, req.params.taskId, req.params.action);
 
-    const { status, data } = await handleTaskPost(getTaskPath, req.body, req)
-    res.status(status)
-    res.send(data)
+    const { status, data } = await handleTaskPost(getTaskPath, req.body, req);
+    res.status(status);
+    res.send(data);
   } catch (error) {
-    next(error)
+    next(error);
   }
 }
 
@@ -83,13 +83,13 @@ export async function postTaskAction(req: EnhancedRequest, res: Response, next: 
 export async function getAllCaseWorkers(req: EnhancedRequest, res: Response, next: NextFunction) {
 
   try {
-    const getCaseWorkerPath: string = prepareCaseWorkerUrl(baseUrl)
+    const getCaseWorkerPath: string = prepareCaseWorkerUrl(baseUrl);
 
-    const jsonResponse = await handleCaseWorkerGetAll(getCaseWorkerPath, req)
-    res.status(200)
-    res.send(jsonResponse)
+    const jsonResponse = await handleCaseWorkerGetAll(getCaseWorkerPath, req);
+    res.status(200);
+    res.send(jsonResponse);
   } catch (error) {
-    next(error)
+    next(error);
   }
 }
 
@@ -99,13 +99,13 @@ export async function getAllCaseWorkers(req: EnhancedRequest, res: Response, nex
 export async function getAllCaseWorkersForLocation(req: EnhancedRequest, res: Response, next: NextFunction) {
 
   try {
-    const getCaseWorkerPath: string = prepareCaseWorkerForLocation(baseUrl, req.params.locationId)
+    const getCaseWorkerPath: string = prepareCaseWorkerForLocation(baseUrl, req.params.locationId);
 
-    const jsonResponse = await handleCaseWorkerForLocation(getCaseWorkerPath, req)
-    res.status(200)
-    res.send(jsonResponse)
+    const jsonResponse = await handleCaseWorkerForLocation(getCaseWorkerPath, req);
+    res.status(200);
+    res.send(jsonResponse);
   } catch (error) {
-    next(error)
+    next(error);
   }
 }
 
@@ -115,13 +115,13 @@ export async function getAllCaseWorkersForLocation(req: EnhancedRequest, res: Re
 export async function getCaseWorkersForService(req: EnhancedRequest, res: Response, next: NextFunction) {
 
   try {
-    const getCaseWorkerPath: string = prepareCaseWorkerForService(baseUrl, req.params.serviceId)
+    const getCaseWorkerPath: string = prepareCaseWorkerForService(baseUrl, req.params.serviceId);
 
-    const jsonResponse = await handleCaseWorkerForService(getCaseWorkerPath, req)
-    res.status(200)
-    res.send(jsonResponse)
+    const jsonResponse = await handleCaseWorkerForService(getCaseWorkerPath, req);
+    res.status(200);
+    res.send(jsonResponse);
   } catch (error) {
-    next(error)
+    next(error);
   }
 }
 
@@ -131,13 +131,13 @@ export async function getCaseWorkersForService(req: EnhancedRequest, res: Respon
 export async function getCaseWorkersForLocationAndService(req: EnhancedRequest, res: Response, next: NextFunction) {
 
   try {
-    const getCaseWorkerPath: string = prepareCaseWorkerForLocationAndService(baseUrl, req.params.locationId, req.params.serviceId)
+    const getCaseWorkerPath = prepareCaseWorkerForLocationAndService(baseUrl, req.params.locationId, req.params.serviceId);
 
-    const jsonResponse = await handleCaseWorkerForLocationAndService(getCaseWorkerPath, req)
-    res.status(200)
-    res.send(jsonResponse)
+    const jsonResponse = await handleCaseWorkerForLocationAndService(getCaseWorkerPath, req);
+    res.status(200);
+    res.send(jsonResponse);
   } catch (error) {
-    next(error)
+    next(error);
   }
 }
 
@@ -146,12 +146,12 @@ export async function getCaseWorkersForLocationAndService(req: EnhancedRequest, 
  */
 export async function searchCaseWorker(req: EnhancedRequest, res: Response, next: NextFunction) {
   try {
-    const postTaskPath: string = prepareCaseWorkerSearchUrl(baseUrl)
+    const postTaskPath: string = prepareCaseWorkerSearchUrl(baseUrl);
 
-    const { status, data } = await handlePostSearch(postTaskPath, req.body, req)
-    res.status(status)
-    res.send(data)
+    const { status, data } = await handlePostSearch(postTaskPath, req.body, req);
+    res.status(status);
+    res.send(data);
   } catch (error) {
-    next(error)
+    next(error);
   }
 }
