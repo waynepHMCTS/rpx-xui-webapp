@@ -41,6 +41,7 @@ export class AlertComponent implements OnInit, OnDestroy {
   }
 
   public setAlertMessage() {
+    // currently only used for default messages but kept in because of possible reversion to earlier techniques if necessary
     this.alertMessageObservable = this.alertService.alerts.pipe(select( alert => alert));
     this.routeSubscription = this.router.events.subscribe(() => this.alertMessage = '');
     this.alertMessageSubscription = this.alertMessageObservable.subscribe(alert => {
@@ -51,7 +52,9 @@ export class AlertComponent implements OnInit, OnDestroy {
     });
   }
 
+  // next three methods are to ensure different message types can be displayed at same time
   public setSuccessMessage() {
+    // specific observable connection to success messages
     this.successMessageObservable = this.alertService.successes.pipe(select( alert => alert));
     this.routeSubscription = this.router.events.subscribe(() => this.successMessage = '');
     this.successMessageSubscription = this.successMessageObservable.subscribe(alert => {
@@ -62,6 +65,7 @@ export class AlertComponent implements OnInit, OnDestroy {
   }
 
   public setErrorMessage() {
+    // specific observable connection to error messages
     this.errorMessageObservable = this.alertService.errors.pipe(select( alert => alert));
     this.routeSubscription = this.router.events.subscribe(() => this.errorMessage = '');
     this.errorMessageSubscription = this.errorMessageObservable.subscribe(alert => {
@@ -72,6 +76,7 @@ export class AlertComponent implements OnInit, OnDestroy {
   }
 
   public setWarningMessage() {
+    // specific observable connection to warning messages
     this.warningMessageObservable = this.alertService.warnings.pipe(select( alert => alert));
     this.routeSubscription = this.router.events.subscribe(() => this.warningMessage = '');
     this.warningMessageSubscription = this.warningMessageObservable.subscribe(alert => {
@@ -82,7 +87,11 @@ export class AlertComponent implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy() {
+    // unsubscribe from all subscriptions
     this.alertMessageSubscription.unsubscribe();
+    this.successMessageSubscription.unsubscribe();
+    this.errorMessageSubscription.unsubscribe();
+    this.warningMessageSubscription.unsubscribe();
     this.routeSubscription.unsubscribe();
   }
 }
