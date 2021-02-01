@@ -1,0 +1,975 @@
+{
+  "consumer": {
+    "name": "xui_work_allocation_task_action"
+  },
+  "provider": {
+    "name": "WorkAllocation_api_task"
+  },
+  "interactions": [
+    {
+      "description": "a request to CANCEL task 'Bob J Cratchit'",
+      "providerState": "CANCEL is successful for task 'Bob J Cratchit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CANCEL task 'David Copperfield'",
+      "providerState": "CANCEL is successful for task 'David Copperfield'",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CANCEL task 'Ebenezer Scrooge'",
+      "providerState": "CANCEL is successful for task 'Ebenezer Scrooge'",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CANCEL task 'Kili Muso'",
+      "providerState": "CANCEL is successful for task 'Kili Muso'",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CANCEL task 'Mankai Lit'",
+      "providerState": "CANCEL is successful for task 'Mankai Lit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CANCEL task 'Oliver Twist'",
+      "providerState": "CANCEL is successful for task 'Oliver Twist'",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CANCEL task 'Brad Request'",
+      "providerState": "CANCEL reports status 400 for task 'Brad Request'",
+      "request": {
+        "method": "POST",
+        "path": "/task/400/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CANCEL task 'Al Reddy-Dunne'",
+      "providerState": "CANCEL reports status 204 for task 'Al Reddy-Dunne'",
+      "request": {
+        "method": "POST",
+        "path": "/task/204/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CANCEL task 'Nat Allowed'",
+      "providerState": "CANCEL reports status 403 for task 'Nat Allowed'",
+      "request": {
+        "method": "POST",
+        "path": "/task/403/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CANCEL task 'Nat Authorised'",
+      "providerState": "CANCEL reports status 401 for task 'Nat Authorised'",
+      "request": {
+        "method": "POST",
+        "path": "/task/401/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CANCEL task 'Anne Supported'",
+      "providerState": "CANCEL reports status 415 for task 'Anne Supported'",
+      "request": {
+        "method": "POST",
+        "path": "/task/415/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CANCEL task 'Sir Van Error'",
+      "providerState": "CANCEL reports status 500 for task 'Sir Van Error'",
+      "request": {
+        "method": "POST",
+        "path": "/task/500/cancel",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CLAIM task 'Bob J Cratchit'",
+      "providerState": "CLAIM is successful for task 'Bob J Cratchit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CLAIM task 'David Copperfield'",
+      "providerState": "CLAIM is successful for task 'David Copperfield'",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CLAIM task 'Ebenezer Scrooge'",
+      "providerState": "CLAIM is successful for task 'Ebenezer Scrooge'",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CLAIM task 'Kili Muso'",
+      "providerState": "CLAIM is successful for task 'Kili Muso'",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CLAIM task 'Mankai Lit'",
+      "providerState": "CLAIM is successful for task 'Mankai Lit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to CLAIM task 'Oliver Twist'",
+      "providerState": "CLAIM is successful for task 'Oliver Twist'",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CLAIM task 'Brad Request'",
+      "providerState": "CLAIM reports status 400 for task 'Brad Request'",
+      "request": {
+        "method": "POST",
+        "path": "/task/400/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CLAIM task 'Al Reddy-Dunne'",
+      "providerState": "CLAIM reports status 204 for task 'Al Reddy-Dunne'",
+      "request": {
+        "method": "POST",
+        "path": "/task/204/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CLAIM task 'Nat Allowed'",
+      "providerState": "CLAIM reports status 403 for task 'Nat Allowed'",
+      "request": {
+        "method": "POST",
+        "path": "/task/403/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CLAIM task 'Nat Authorised'",
+      "providerState": "CLAIM reports status 401 for task 'Nat Authorised'",
+      "request": {
+        "method": "POST",
+        "path": "/task/401/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CLAIM task 'Anne Supported'",
+      "providerState": "CLAIM reports status 415 for task 'Anne Supported'",
+      "request": {
+        "method": "POST",
+        "path": "/task/415/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to CLAIM task 'Sir Van Error'",
+      "providerState": "CLAIM reports status 500 for task 'Sir Van Error'",
+      "request": {
+        "method": "POST",
+        "path": "/task/500/claim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to COMPLETE task 'Bob J Cratchit'",
+      "providerState": "COMPLETE is successful for task 'Bob J Cratchit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to COMPLETE task 'David Copperfield'",
+      "providerState": "COMPLETE is successful for task 'David Copperfield'",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to COMPLETE task 'Ebenezer Scrooge'",
+      "providerState": "COMPLETE is successful for task 'Ebenezer Scrooge'",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to COMPLETE task 'Kili Muso'",
+      "providerState": "COMPLETE is successful for task 'Kili Muso'",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to COMPLETE task 'Mankai Lit'",
+      "providerState": "COMPLETE is successful for task 'Mankai Lit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to COMPLETE task 'Oliver Twist'",
+      "providerState": "COMPLETE is successful for task 'Oliver Twist'",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to COMPLETE task 'Brad Request'",
+      "providerState": "COMPLETE reports status 400 for task 'Brad Request'",
+      "request": {
+        "method": "POST",
+        "path": "/task/400/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to COMPLETE task 'Al Reddy-Dunne'",
+      "providerState": "COMPLETE reports status 204 for task 'Al Reddy-Dunne'",
+      "request": {
+        "method": "POST",
+        "path": "/task/204/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to COMPLETE task 'Nat Allowed'",
+      "providerState": "COMPLETE reports status 403 for task 'Nat Allowed'",
+      "request": {
+        "method": "POST",
+        "path": "/task/403/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to COMPLETE task 'Nat Authorised'",
+      "providerState": "COMPLETE reports status 401 for task 'Nat Authorised'",
+      "request": {
+        "method": "POST",
+        "path": "/task/401/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to COMPLETE task 'Anne Supported'",
+      "providerState": "COMPLETE reports status 415 for task 'Anne Supported'",
+      "request": {
+        "method": "POST",
+        "path": "/task/415/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to COMPLETE task 'Sir Van Error'",
+      "providerState": "COMPLETE reports status 500 for task 'Sir Van Error'",
+      "request": {
+        "method": "POST",
+        "path": "/task/500/complete",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to REASSIGN task 'Bob J Cratchit'",
+      "providerState": "REASSIGN is successful for task 'Bob J Cratchit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to REASSIGN task 'David Copperfield'",
+      "providerState": "REASSIGN is successful for task 'David Copperfield'",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to REASSIGN task 'Ebenezer Scrooge'",
+      "providerState": "REASSIGN is successful for task 'Ebenezer Scrooge'",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to REASSIGN task 'Kili Muso'",
+      "providerState": "REASSIGN is successful for task 'Kili Muso'",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to REASSIGN task 'Mankai Lit'",
+      "providerState": "REASSIGN is successful for task 'Mankai Lit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to REASSIGN task 'Oliver Twist'",
+      "providerState": "REASSIGN is successful for task 'Oliver Twist'",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to REASSIGN task 'Brad Request'",
+      "providerState": "REASSIGN reports status 400 for task 'Brad Request'",
+      "request": {
+        "method": "POST",
+        "path": "/task/400/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to REASSIGN task 'Al Reddy-Dunne'",
+      "providerState": "REASSIGN reports status 204 for task 'Al Reddy-Dunne'",
+      "request": {
+        "method": "POST",
+        "path": "/task/204/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to REASSIGN task 'Nat Allowed'",
+      "providerState": "REASSIGN reports status 403 for task 'Nat Allowed'",
+      "request": {
+        "method": "POST",
+        "path": "/task/403/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to REASSIGN task 'Nat Authorised'",
+      "providerState": "REASSIGN reports status 401 for task 'Nat Authorised'",
+      "request": {
+        "method": "POST",
+        "path": "/task/401/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to REASSIGN task 'Anne Supported'",
+      "providerState": "REASSIGN reports status 415 for task 'Anne Supported'",
+      "request": {
+        "method": "POST",
+        "path": "/task/415/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to REASSIGN task 'Sir Van Error'",
+      "providerState": "REASSIGN reports status 500 for task 'Sir Van Error'",
+      "request": {
+        "method": "POST",
+        "path": "/task/500/reassign",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to RELEASE task 'Bob J Cratchit'",
+      "providerState": "RELEASE is successful for task 'Bob J Cratchit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to RELEASE task 'David Copperfield'",
+      "providerState": "RELEASE is successful for task 'David Copperfield'",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to RELEASE task 'Ebenezer Scrooge'",
+      "providerState": "RELEASE is successful for task 'Ebenezer Scrooge'",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to RELEASE task 'Kili Muso'",
+      "providerState": "RELEASE is successful for task 'Kili Muso'",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to RELEASE task 'Mankai Lit'",
+      "providerState": "RELEASE is successful for task 'Mankai Lit'",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to RELEASE task 'Oliver Twist'",
+      "providerState": "RELEASE is successful for task 'Oliver Twist'",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to RELEASE task 'Brad Request'",
+      "providerState": "RELEASE reports status 400 for task 'Brad Request'",
+      "request": {
+        "method": "POST",
+        "path": "/task/400/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to RELEASE task 'Al Reddy-Dunne'",
+      "providerState": "RELEASE reports status 204 for task 'Al Reddy-Dunne'",
+      "request": {
+        "method": "POST",
+        "path": "/task/204/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to RELEASE task 'Nat Allowed'",
+      "providerState": "RELEASE reports status 403 for task 'Nat Allowed'",
+      "request": {
+        "method": "POST",
+        "path": "/task/403/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to RELEASE task 'Nat Authorised'",
+      "providerState": "RELEASE reports status 401 for task 'Nat Authorised'",
+      "request": {
+        "method": "POST",
+        "path": "/task/401/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to RELEASE task 'Anne Supported'",
+      "providerState": "RELEASE reports status 415 for task 'Anne Supported'",
+      "request": {
+        "method": "POST",
+        "path": "/task/415/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to RELEASE task 'Sir Van Error'",
+      "providerState": "RELEASE reports status 500 for task 'Sir Van Error'",
+      "request": {
+        "method": "POST",
+        "path": "/task/500/unclaim",
+        "body": {
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

@@ -1,0 +1,4929 @@
+{
+  "consumer": {
+    "name": "xui_work_allocation_task_search_by_caseworker"
+  },
+  "provider": {
+    "name": "WorkAllocation_api_task"
+  },
+  "interactions": [
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in ascending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in descending order of caseReference",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseReference",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in ascending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in descending order of caseName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in ascending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in descending order of caseCategory",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "caseCategory",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in ascending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in descending order of location",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "location",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in ascending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in descending order of taskName",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "taskName",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in ascending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in descending order of dueDate",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "dueDate",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Al Reddy-Dunne in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Al Reddy-Dunne"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Anne Supported in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Anne Supported"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Brad Request in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Brad Request"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Jane Doe in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Jane Doe"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "2345678901234567",
+              "caseReference": "2345 6789 0123 4567",
+              "caseName": "Mankai Lit",
+              "caseCategory": "Revocation",
+              "location": "Taylor House",
+              "taskName": "Review appellant case",
+              "dueDate": "2020-11-04T16:19:49.000Z",
+              "assignee": "Jane Doe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for John Smith in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "John Smith"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+            {
+              "id": "3456789012345678",
+              "caseReference": "3456 7890 1234 5678",
+              "caseName": "Bob J Cratchit",
+              "caseCategory": "Protection",
+              "location": "Taylor Swift",
+              "taskName": "Review respondent evidence",
+              "dueDate": "2021-02-01T12:16:12.226Z",
+              "assignee": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Joseph Bloggs in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Joseph Bloggs"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Nat Allowed in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Nat Allowed"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Noah Body in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Noah Body"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in ascending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "ascending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "a valid request to search for all tasks for Sir Van Error in descending order of assignee",
+      "providerState": "a list of appropriate tasks are returned",
+      "request": {
+        "method": "POST",
+        "path": "/task",
+        "body": {
+          "search_parameters": [
+            {
+              "key": "assignee",
+              "operator": "sort",
+              "values": [
+                "descending"
+              ]
+            },
+            {
+              "key": "assignee",
+              "operator": "IN",
+              "values": [
+                "Sir Van Error"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tasks": [
+
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

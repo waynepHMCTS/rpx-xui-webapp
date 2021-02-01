@@ -1,0 +1,318 @@
+{
+  "consumer": {
+    "name": "xui_work_allocation_task_get_by_id"
+  },
+  "provider": {
+    "name": "WorkAllocation_api_task"
+  },
+  "interactions": [
+    {
+      "description": "a request for task with id 3456789012345678",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/3456789012345678"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "3456789012345678",
+            "caseReference": "3456 7890 1234 5678",
+            "caseName": "Bob J Cratchit",
+            "caseCategory": "Protection",
+            "location": "Taylor Swift",
+            "taskName": "Review respondent evidence",
+            "dueDate": "2021-02-01T12:16:12.226Z",
+            "assignee": "John Smith"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 6789012345678901",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/6789012345678901"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "6789012345678901",
+            "caseReference": "6789 0123 4567 8901",
+            "caseName": "David Copperfield",
+            "caseCategory": "Revocation",
+            "location": "Taylor House",
+            "alert": true,
+            "taskName": "Review appellant case",
+            "dueDate": "2020-11-04T16:19:49.000Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 4567890123456789",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/4567890123456789"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "4567890123456789",
+            "caseReference": "4567 8901 2345 6789",
+            "caseName": "Ebenezer Scrooge",
+            "caseCategory": "Revocation",
+            "location": "Bleak House",
+            "taskName": "Review appellant case",
+            "dueDate": "2020-11-04T16:19:49.000Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 1604075580956811",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/1604075580956811"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "1604075580956811",
+            "caseReference": "1604 0755 8095 6811",
+            "caseName": "Kili Muso",
+            "caseCategory": "Grant of representation",
+            "location": "Taylor House",
+            "taskName": "Apply for probate",
+            "dueDate": "2020-11-09T16:19:49.000Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 2345678901234567",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/2345678901234567"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "2345678901234567",
+            "caseReference": "2345 6789 0123 4567",
+            "caseName": "Mankai Lit",
+            "caseCategory": "Revocation",
+            "location": "Taylor House",
+            "taskName": "Review appellant case",
+            "dueDate": "2020-11-04T16:19:49.000Z",
+            "assignee": "Jane Doe"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 5678901234567890",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/5678901234567890"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "5678901234567890",
+            "caseReference": "5678 9012 3456 7890",
+            "caseName": "Oliver Twist",
+            "caseCategory": "Protection",
+            "location": "Orphanage",
+            "taskName": "Give more gruel",
+            "dueDate": "2021-02-06T12:16:12.226Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 400",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/400"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "400",
+            "caseReference": "0400 0400 0400 0400",
+            "caseName": "Brad Request",
+            "caseCategory": "Will Fail",
+            "location": "Dodgy Location",
+            "taskName": "Assess errors",
+            "dueDate": "2021-02-01T12:16:12.226Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 204",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/204"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "204",
+            "caseReference": "0204 0204 0204 0204",
+            "caseName": "Al Reddy-Dunne",
+            "caseCategory": "Will Fail",
+            "location": "Dodgy Location",
+            "taskName": "Assess errors",
+            "dueDate": "2021-02-01T12:16:12.226Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 403",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/403"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "403",
+            "caseReference": "0403 0403 0403 0403",
+            "caseName": "Nat Allowed",
+            "caseCategory": "Will Fail",
+            "location": "Dodgy Location",
+            "taskName": "Assess errors",
+            "dueDate": "2021-02-01T12:16:12.226Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 401",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/401"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "401",
+            "caseReference": "0401 0401 0401 0401",
+            "caseName": "Nat Authorised",
+            "caseCategory": "Will Fail",
+            "location": "Dodgy Location",
+            "taskName": "Assess errors",
+            "dueDate": "2021-02-01T12:16:12.226Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 415",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/415"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "415",
+            "caseReference": "0415 0415 0415 0415",
+            "caseName": "Anne Supported",
+            "caseCategory": "Will Fail",
+            "location": "Dodgy Location",
+            "taskName": "Assess errors",
+            "dueDate": "2021-02-01T12:16:12.226Z"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for task with id 500",
+      "providerState": "appropriate task is returned",
+      "request": {
+        "method": "GET",
+        "path": "/task/500"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "task": {
+            "id": "500",
+            "caseReference": "0500 0500 0500 0500",
+            "caseName": "Sir Van Error",
+            "caseCategory": "Will Fail",
+            "location": "Dodgy Location",
+            "taskName": "Assess errors",
+            "dueDate": "2021-02-01T12:16:12.226Z"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
