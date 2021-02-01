@@ -1,0 +1,1095 @@
+{
+  "consumer": {
+    "name": "xui_work_allocation_task_assign"
+  },
+  "provider": {
+    "name": "WorkAllocation_api_task"
+  },
+  "interactions": [
+    {
+      "description": "a request to ASSIGN task 'Bob J Cratchit' to/for Jane Doe",
+      "providerState": "ASSIGN is successful for task 'Bob J Cratchit' to/for Jane Doe",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "2",
+            "userName": "Jane Doe"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Bob J Cratchit' to/for John Smith",
+      "providerState": "ASSIGN is successful for task 'Bob J Cratchit' to/for John Smith",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "1",
+            "userName": "John Smith"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Bob J Cratchit' to/for Joseph Bloggs",
+      "providerState": "ASSIGN is successful for task 'Bob J Cratchit' to/for Joseph Bloggs",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "3",
+            "userName": "Joseph Bloggs"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Bob J Cratchit' to/for Noah Body",
+      "providerState": "ASSIGN is successful for task 'Bob J Cratchit' to/for Noah Body",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "4",
+            "userName": "Noah Body"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Bob J Cratchit' to/for Al Reddy-Dunne",
+      "providerState": "ASSIGN reports status 204 for task 'Bob J Cratchit' to/for Al Reddy-Dunne",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "204",
+            "userName": "Al Reddy-Dunne"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Bob J Cratchit' to/for Anne Supported",
+      "providerState": "ASSIGN reports status 415 for task 'Bob J Cratchit' to/for Anne Supported",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "415",
+            "userName": "Anne Supported"
+          }
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Bob J Cratchit' to/for Brad Request",
+      "providerState": "ASSIGN reports status 400 for task 'Bob J Cratchit' to/for Brad Request",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "400",
+            "userName": "Brad Request"
+          }
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Bob J Cratchit' to/for Nat Allowed",
+      "providerState": "ASSIGN reports status 403 for task 'Bob J Cratchit' to/for Nat Allowed",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "403",
+            "userName": "Nat Allowed"
+          }
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Bob J Cratchit' to/for Sir Van Error",
+      "providerState": "ASSIGN reports status 500 for task 'Bob J Cratchit' to/for Sir Van Error",
+      "request": {
+        "method": "POST",
+        "path": "/task/3456789012345678/assign",
+        "body": {
+          "assignee": {
+            "id": "500",
+            "userName": "Sir Van Error"
+          }
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'David Copperfield' to/for Jane Doe",
+      "providerState": "ASSIGN is successful for task 'David Copperfield' to/for Jane Doe",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "2",
+            "userName": "Jane Doe"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'David Copperfield' to/for John Smith",
+      "providerState": "ASSIGN is successful for task 'David Copperfield' to/for John Smith",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "1",
+            "userName": "John Smith"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'David Copperfield' to/for Joseph Bloggs",
+      "providerState": "ASSIGN is successful for task 'David Copperfield' to/for Joseph Bloggs",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "3",
+            "userName": "Joseph Bloggs"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'David Copperfield' to/for Noah Body",
+      "providerState": "ASSIGN is successful for task 'David Copperfield' to/for Noah Body",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "4",
+            "userName": "Noah Body"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'David Copperfield' to/for Al Reddy-Dunne",
+      "providerState": "ASSIGN reports status 204 for task 'David Copperfield' to/for Al Reddy-Dunne",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "204",
+            "userName": "Al Reddy-Dunne"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'David Copperfield' to/for Anne Supported",
+      "providerState": "ASSIGN reports status 415 for task 'David Copperfield' to/for Anne Supported",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "415",
+            "userName": "Anne Supported"
+          }
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'David Copperfield' to/for Brad Request",
+      "providerState": "ASSIGN reports status 400 for task 'David Copperfield' to/for Brad Request",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "400",
+            "userName": "Brad Request"
+          }
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'David Copperfield' to/for Nat Allowed",
+      "providerState": "ASSIGN reports status 403 for task 'David Copperfield' to/for Nat Allowed",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "403",
+            "userName": "Nat Allowed"
+          }
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'David Copperfield' to/for Sir Van Error",
+      "providerState": "ASSIGN reports status 500 for task 'David Copperfield' to/for Sir Van Error",
+      "request": {
+        "method": "POST",
+        "path": "/task/6789012345678901/assign",
+        "body": {
+          "assignee": {
+            "id": "500",
+            "userName": "Sir Van Error"
+          }
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Ebenezer Scrooge' to/for Jane Doe",
+      "providerState": "ASSIGN is successful for task 'Ebenezer Scrooge' to/for Jane Doe",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "2",
+            "userName": "Jane Doe"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Ebenezer Scrooge' to/for John Smith",
+      "providerState": "ASSIGN is successful for task 'Ebenezer Scrooge' to/for John Smith",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "1",
+            "userName": "John Smith"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Ebenezer Scrooge' to/for Joseph Bloggs",
+      "providerState": "ASSIGN is successful for task 'Ebenezer Scrooge' to/for Joseph Bloggs",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "3",
+            "userName": "Joseph Bloggs"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Ebenezer Scrooge' to/for Noah Body",
+      "providerState": "ASSIGN is successful for task 'Ebenezer Scrooge' to/for Noah Body",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "4",
+            "userName": "Noah Body"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Ebenezer Scrooge' to/for Al Reddy-Dunne",
+      "providerState": "ASSIGN reports status 204 for task 'Ebenezer Scrooge' to/for Al Reddy-Dunne",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "204",
+            "userName": "Al Reddy-Dunne"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Ebenezer Scrooge' to/for Anne Supported",
+      "providerState": "ASSIGN reports status 415 for task 'Ebenezer Scrooge' to/for Anne Supported",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "415",
+            "userName": "Anne Supported"
+          }
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Ebenezer Scrooge' to/for Brad Request",
+      "providerState": "ASSIGN reports status 400 for task 'Ebenezer Scrooge' to/for Brad Request",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "400",
+            "userName": "Brad Request"
+          }
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Ebenezer Scrooge' to/for Nat Allowed",
+      "providerState": "ASSIGN reports status 403 for task 'Ebenezer Scrooge' to/for Nat Allowed",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "403",
+            "userName": "Nat Allowed"
+          }
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Ebenezer Scrooge' to/for Sir Van Error",
+      "providerState": "ASSIGN reports status 500 for task 'Ebenezer Scrooge' to/for Sir Van Error",
+      "request": {
+        "method": "POST",
+        "path": "/task/4567890123456789/assign",
+        "body": {
+          "assignee": {
+            "id": "500",
+            "userName": "Sir Van Error"
+          }
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Kili Muso' to/for Jane Doe",
+      "providerState": "ASSIGN is successful for task 'Kili Muso' to/for Jane Doe",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "2",
+            "userName": "Jane Doe"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Kili Muso' to/for John Smith",
+      "providerState": "ASSIGN is successful for task 'Kili Muso' to/for John Smith",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "1",
+            "userName": "John Smith"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Kili Muso' to/for Joseph Bloggs",
+      "providerState": "ASSIGN is successful for task 'Kili Muso' to/for Joseph Bloggs",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "3",
+            "userName": "Joseph Bloggs"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Kili Muso' to/for Noah Body",
+      "providerState": "ASSIGN is successful for task 'Kili Muso' to/for Noah Body",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "4",
+            "userName": "Noah Body"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Kili Muso' to/for Al Reddy-Dunne",
+      "providerState": "ASSIGN reports status 204 for task 'Kili Muso' to/for Al Reddy-Dunne",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "204",
+            "userName": "Al Reddy-Dunne"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Kili Muso' to/for Anne Supported",
+      "providerState": "ASSIGN reports status 415 for task 'Kili Muso' to/for Anne Supported",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "415",
+            "userName": "Anne Supported"
+          }
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Kili Muso' to/for Brad Request",
+      "providerState": "ASSIGN reports status 400 for task 'Kili Muso' to/for Brad Request",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "400",
+            "userName": "Brad Request"
+          }
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Kili Muso' to/for Nat Allowed",
+      "providerState": "ASSIGN reports status 403 for task 'Kili Muso' to/for Nat Allowed",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "403",
+            "userName": "Nat Allowed"
+          }
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Kili Muso' to/for Sir Van Error",
+      "providerState": "ASSIGN reports status 500 for task 'Kili Muso' to/for Sir Van Error",
+      "request": {
+        "method": "POST",
+        "path": "/task/1604075580956811/assign",
+        "body": {
+          "assignee": {
+            "id": "500",
+            "userName": "Sir Van Error"
+          }
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Mankai Lit' to/for Jane Doe",
+      "providerState": "ASSIGN is successful for task 'Mankai Lit' to/for Jane Doe",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "2",
+            "userName": "Jane Doe"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Mankai Lit' to/for John Smith",
+      "providerState": "ASSIGN is successful for task 'Mankai Lit' to/for John Smith",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "1",
+            "userName": "John Smith"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Mankai Lit' to/for Joseph Bloggs",
+      "providerState": "ASSIGN is successful for task 'Mankai Lit' to/for Joseph Bloggs",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "3",
+            "userName": "Joseph Bloggs"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Mankai Lit' to/for Noah Body",
+      "providerState": "ASSIGN is successful for task 'Mankai Lit' to/for Noah Body",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "4",
+            "userName": "Noah Body"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Mankai Lit' to/for Al Reddy-Dunne",
+      "providerState": "ASSIGN reports status 204 for task 'Mankai Lit' to/for Al Reddy-Dunne",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "204",
+            "userName": "Al Reddy-Dunne"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Mankai Lit' to/for Anne Supported",
+      "providerState": "ASSIGN reports status 415 for task 'Mankai Lit' to/for Anne Supported",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "415",
+            "userName": "Anne Supported"
+          }
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Mankai Lit' to/for Brad Request",
+      "providerState": "ASSIGN reports status 400 for task 'Mankai Lit' to/for Brad Request",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "400",
+            "userName": "Brad Request"
+          }
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Mankai Lit' to/for Nat Allowed",
+      "providerState": "ASSIGN reports status 403 for task 'Mankai Lit' to/for Nat Allowed",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "403",
+            "userName": "Nat Allowed"
+          }
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Mankai Lit' to/for Sir Van Error",
+      "providerState": "ASSIGN reports status 500 for task 'Mankai Lit' to/for Sir Van Error",
+      "request": {
+        "method": "POST",
+        "path": "/task/2345678901234567/assign",
+        "body": {
+          "assignee": {
+            "id": "500",
+            "userName": "Sir Van Error"
+          }
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Oliver Twist' to/for Jane Doe",
+      "providerState": "ASSIGN is successful for task 'Oliver Twist' to/for Jane Doe",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "2",
+            "userName": "Jane Doe"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Oliver Twist' to/for John Smith",
+      "providerState": "ASSIGN is successful for task 'Oliver Twist' to/for John Smith",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "1",
+            "userName": "John Smith"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Oliver Twist' to/for Joseph Bloggs",
+      "providerState": "ASSIGN is successful for task 'Oliver Twist' to/for Joseph Bloggs",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "3",
+            "userName": "Joseph Bloggs"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a request to ASSIGN task 'Oliver Twist' to/for Noah Body",
+      "providerState": "ASSIGN is successful for task 'Oliver Twist' to/for Noah Body",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "4",
+            "userName": "Noah Body"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Oliver Twist' to/for Al Reddy-Dunne",
+      "providerState": "ASSIGN reports status 204 for task 'Oliver Twist' to/for Al Reddy-Dunne",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "204",
+            "userName": "Al Reddy-Dunne"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Oliver Twist' to/for Anne Supported",
+      "providerState": "ASSIGN reports status 415 for task 'Oliver Twist' to/for Anne Supported",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "415",
+            "userName": "Anne Supported"
+          }
+        }
+      },
+      "response": {
+        "status": 415,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Oliver Twist' to/for Brad Request",
+      "providerState": "ASSIGN reports status 400 for task 'Oliver Twist' to/for Brad Request",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "400",
+            "userName": "Brad Request"
+          }
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Oliver Twist' to/for Nat Allowed",
+      "providerState": "ASSIGN reports status 403 for task 'Oliver Twist' to/for Nat Allowed",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "403",
+            "userName": "Nat Allowed"
+          }
+        }
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "description": "a squiffy request to ASSIGN task 'Oliver Twist' to/for Sir Van Error",
+      "providerState": "ASSIGN reports status 500 for task 'Oliver Twist' to/for Sir Van Error",
+      "request": {
+        "method": "POST",
+        "path": "/task/5678901234567890/assign",
+        "body": {
+          "assignee": {
+            "id": "500",
+            "userName": "Sir Van Error"
+          }
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
