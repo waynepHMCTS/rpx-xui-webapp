@@ -116,32 +116,58 @@ if (args.standalone){
 
 
 function setUpcaseConfig(caseConfig) {
-    mockInstance.onGet('/data/internal/cases/:caseid/event-triggers/:eventId', (req, res) => {
-        res.send(getDLCaseConfig().getCase());
+    console.log("event create called");
+
+    mockInstance.onGet('/data/internal/cases/:caseid', (req, res) => {
+
+        let caseDetails = new CCDCaseDetails("Mock case");
+        console.log("event create called");
+        caseDetails
+        .addTab("MockCase Tab")
+            .addFieldWithConfigToTab({
+                id: "collection", type: "Collection", label: "Collection field", collection_field_type:
+                {
+                    id: "complexField", type: "Complex", label: "complexfdield", complex_fields:[
+                        { id:"text", type:"Text", label:"Text field 1"},
+                        { id: "text2", type: "Text", label: "Text field 2" }
+                    ]
+                        
+                },
+                props: { "display_context_parameter": "#TABLE(text)" },
+                value: [
+                    { id: "1234", value: { text: "sample test", text2: "sample test" }},
+                    { id: "1233", value: { text: "sample test", text2: "sample test" } },
+                    { id: "1235", value: { text: "sample test", text2: "sample test" } },
+                ],
+
+
+            })
+            
+        res.send(caseDetails.caseDetailsTemplate);
     });
 
-    mockInstance.onPost('/data/case-types/:caseType/validate', (req, res) => {
-        caseValidationRequestBody = req.body;
-        let pageId = req.query.pageId;
-        if (pageId === "testPage1"){
-            caseValidationRequestBody.data.dl2 = { value: { code: "Testitem_1234", label: "Test item 1234" }, list_items: [{ code: "Testitem_1234", label: "Test item 1234" }, { code: "Testitem_12345", label: "Test item 12345" }]}
-        }
-        const responseBody = {
-            data: caseValidationRequestBody.data,
-            "_links": { "self": { "href": "http://ccd-data-store-api-aat.service.core-compute-demo.internal" + req.path + "?pageId=" + req.query.pageId } }
-        }
-        res.send(responseBody);
-    });
+    // mockInstance.onPost('/data/case-types/:caseType/validate', (req, res) => {
+    //     caseValidationRequestBody = req.body;
+    //     let pageId = req.query.pageId;
+    //     if (pageId === "testPage1"){
+    //         caseValidationRequestBody.data.dl2 = { value: { code: "Testitem_1234", label: "Test item 1234" }, list_items: [{ code: "Testitem_1234", label: "Test item 1234" }, { code: "Testitem_12345", label: "Test item 12345" }]}
+    //     }
+    //     const responseBody = {
+    //         data: caseValidationRequestBody.data,
+    //         "_links": { "self": { "href": "http://ccd-data-store-api-aat.service.core-compute-demo.internal" + req.path + "?pageId=" + req.query.pageId } }
+    //     }
+    //     res.send(responseBody);
+    // });
 
-    mockInstance.onPost('/data/cases/:caseid/events', (req, res) => {
-        caseEventSubmitRequestBody = req.body;
-        const responseBody = {
-            id: Date.now(),
-            data: req.body.data,
-            "_links": { "self": { "href": "http://ccd-data-store-api-demo.service.core-compute-demo.internal" + req.path + "?ignore-warning=false" } }
-        }
-        res.send(responseBody)
-    });
+    // mockInstance.onPost('/data/cases/:caseid/events', (req, res) => {
+    //     caseEventSubmitRequestBody = req.body;
+    //     const responseBody = {
+    //         id: Date.now(),
+    //         data: req.body.data,
+    //         "_links": { "self": { "href": "http://ccd-data-store-api-demo.service.core-compute-demo.internal" + req.path + "?ignore-warning=false" } }
+    //     }
+    //     res.send(responseBody)
+    // });
 
 }
 

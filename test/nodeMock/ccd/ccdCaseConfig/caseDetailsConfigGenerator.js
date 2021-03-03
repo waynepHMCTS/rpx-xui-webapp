@@ -1,4 +1,5 @@
 const CCDCaseField = require('./CCDCaseField');
+const CCDCaseConfig = require('./caseCreateConfigGenerator');
 
 const caseDetailsConfig = {
   "case_id": "1606297307593887",
@@ -24,7 +25,7 @@ const caseDetailsConfig = {
     "id": "Submitted",
     "name": "Submitted",
     "description": "Submitted case state - LA can no longer edit",
-    "title_display": "# ${caseName}\n## **FamilyMan ID: ${familyManCaseNumber}**\n## **CCD ID: #${[CASE_REFERENCE]}**"
+    "title_display": "Mock case title"
   },
   "triggers": [ ],
   "events": [ ]
@@ -81,7 +82,7 @@ class CCDCaseDetails extends CCDCaseField{
         }
         let ccdCaseField = this.getCCDFieldTemplateCopy(fieldConfig);
         
-        this.currentTab.fields.push(caseField);
+        this.currentTab.fields.push(ccdCaseField);
         return this;
     }
 
