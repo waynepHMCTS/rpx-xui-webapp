@@ -104,7 +104,7 @@ class CCDCaseConfig extends CCDCaseField{
     }
 
     setComplexField(fieldConfig){
-        this.currentComplexField.field_type.complex_fields.push(his.getCCDFieldTemplateCopy(fieldConfig));
+        this.currentComplexField.field_type.complex_fields.push(this.getCCDFieldTemplateCopy(fieldConfig));
         return this;
     }
 

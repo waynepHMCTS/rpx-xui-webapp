@@ -1,12 +1,15 @@
 
 const taskListPage = require('../pageObjects/workAllocation/taskListPage');
 const taskAssignmentPage = require('../pageObjects/workAllocation/taskAssignmentPage');
+const taskActionPage = require('../pageObjects/workAllocation/taskActionPage');
+
 
 const taskmanagerPage = require('../pageObjects/workAllocation/taskManagerPage');
 var { defineSupportCode } = require('cucumber');
 
 const reportLogger = require('../../support/reportLogger');
 const Browserutil = require('../../../ngIntegration/util/browserUtil');
+const BrowserWaits = require('../../support/customWaits');
 
 defineSupportCode(function ({ And, But, Given, Then, When }) {
 
@@ -22,8 +25,23 @@ defineSupportCode(function ({ And, But, Given, Then, When }) {
         expect(await taskListPage.isTableDisplayed(), "Task list table is not present").to.be.true;
     });
 
-    Then('I see Task list table displaying some tasks', async function () {
-        expect(await taskListPage.getTaskListCountInTable(), "Task list has no rows displayed ").to.be.greaterThan(0);
+    Then('I see Task list My tasks table displaying some tasks', async function () { 
+        await BrowserWaits.retryWithActionCallback(async () => {
+            expect(await taskListPage.getTaskListCountInTable(), "Task list has no rows displayed ").to.be.greaterThan(0);
+        });
+    });
+
+    Then('I see Task list Available tasks table displaying some tasks', async function () {
+        await BrowserWaits.retryWithActionCallback(async () => {
+            expect(await taskListPage.getTaskListCountInTable(), "Task list has no rows displayed ").to.be.greaterThan(0);
+        });
+    });
+
+
+    Then('I see Task manager table displaying some tasks', async function () {
+        await BrowserWaits.retryWithActionCallback(async () => {
+            expect(await taskListPage.getTaskListCountInTable(), "Task list has no rows displayed ").to.be.greaterThan(0);
+        });
     });
 
 
@@ -111,22 +129,27 @@ defineSupportCode(function ({ And, But, Given, Then, When }) {
        }
     });
 
-    When('I Unclaim my task and note taskId wuth reference {string}', async function (taskIdReference) {
+    When('I Unclaim my task and note taskId with reference {string}', async function (taskIdReference) {
         const tasksCount = await taskListPage.getTaskListCountInTable();
         reportLogger.AddMessage("Total tasks listed  " + tasksCount);
 
         for (let i = 1; i <= tasksCount; i++) {
-            const isActionBarDisplayed = await taskListPage.isTaskActionBarDisplayedForAtPos(i);
-            if (!isActionBarDisplayed) {
-                await taskListPage.clickManageLinkForTaskAt(i);
-            }
-            scenarioData[taskIdReference] = await taskListPage.getColumnValueForTaskAt('Case reference', i);
-            expect(await taskListPage.isTaskActionBarDisplayedForAtPos(i), "Task actions row not displayed for task at row " + i).to.be.true;
-            await taskListPage.clickTaskAction("Unassign task");
+           
+            await BrowserWaits.retryWithActionCallback(async () => {
+                const isActionBarDisplayed = await taskListPage.isTaskActionBarDisplayedForAtPos(i);
+                if (!isActionBarDisplayed) {
+                    await taskListPage.clickManageLinkForTaskAt(i);
+                }
+                scenarioData[taskIdReference] = await taskListPage.getColumnValueForTaskAt('Case reference', i);
 
-            expect(await taskAssignmentPage.amOnPage(),"Unassign task page not displayed").to.be.true;
-            await taskAssignmentPage.clickUnassignBtn();
-            const messages = await taskAssignmentPage.getBannerMessagesDisplayed();
+                expect(await taskListPage.isTaskActionBarDisplayedForAtPos(i), "Task actions row not displayed for task at row " + i).to.be.true;
+                await taskListPage.clickTaskAction("Unassign task");
+                expect(await taskActionPage.amOnPage(), "Unassign task page not displayed").to.be.true;
+            }, "Action to navigate to Unassign task page");
+
+
+            await taskActionPage.clickUnassignBtn();
+            const messages = await taskActionPage.getBannerMessagesDisplayed();
 
 
             if (await taskListPage.isMyTasksDisplayed()) {
