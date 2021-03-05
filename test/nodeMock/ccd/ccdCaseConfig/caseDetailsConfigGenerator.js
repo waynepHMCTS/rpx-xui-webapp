@@ -45,6 +45,7 @@ class CCDCaseDetails extends CCDCaseField{
         this.caseDetailsTemplate.case_type.description = "Mock case description "+name;
 
         this.currentTab = null;
+        this.currentField = null;
 
     }
 
@@ -60,6 +61,7 @@ class CCDCaseDetails extends CCDCaseField{
         }
         this.caseDetailsTemplate.tabs.push(tab);
         this.currentTab = tab;
+        this.currentField = null;
         return this;
     }
 
@@ -80,10 +82,17 @@ class CCDCaseDetails extends CCDCaseField{
         if (!this.currentTab){
             throw new Error("No tab added. Add a tab before adding a Case field");
         }
-        let ccdCaseField = this.getCCDFieldTemplateCopy(fieldConfig);
+        this.currentField = this.getCCDFieldTemplateCopy(fieldConfig);
         
-        this.currentTab.fields.push(ccdCaseField);
+        this.currentTab.fields.push(this.currentField);
         return this;
+    }
+
+    setfieldprops(props){
+        if (!this.currentField){
+            throw new Error("No field added to tab to set props.");
+        }
+        this.setObjectProps(this.currentField,props);
     }
 
 
