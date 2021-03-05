@@ -125,6 +125,9 @@ function setUpcaseConfig(caseConfig) {
         caseDetails
         .addTab("MockCase Tab")
             .addFieldWithConfigToTab({
+                id:"textfield", type:"Text", label:"Simple text", value: "show"
+            })
+            .addFieldWithConfigToTab({
                 id: "collection", type: "Collection", label: "Collection field", collection_field_type:
                 {
                     id: "complexField", type: "Complex", label: "complexfdield", complex_fields:[
@@ -141,6 +144,9 @@ function setUpcaseConfig(caseConfig) {
                 ],
 
 
+            }).
+            setfieldprops({
+                show_condition: `textfield=\\"show\\"`
             })
             
         res.send(caseDetails.caseDetailsTemplate);
