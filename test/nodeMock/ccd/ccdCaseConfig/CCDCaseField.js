@@ -104,12 +104,13 @@ class CCDcaseField{
         }
 
         if(fieldConfig.list){
-            template.field_type.fixed_list_items = fieldConfig.list; 
+            template.field_type.fixed_list_items = fieldConfig.list;
         }
 
 
         template.id = fieldConfig.id ? fieldConfig.id : fieldConfig.label ?  this.toCamelCase(fieldConfig.label) : "No id or label provided";
         template.label = fieldConfig.label ? fieldConfig.label : fieldConfig.id ? this.toDeCamelize(fieldConfig.id) : "Nameless field";
+        template.show_condition = fieldConfig.show_condition;
         this.ConfigureCCDField(template, fieldConfig);
         if (fieldConfig.value) {
             template.value = fieldConfig.value
@@ -141,7 +142,7 @@ class CCDcaseField{
 
         }
     }
- 
+
     setObjectProps(fieldObj, props) {
         Object.keys(props).forEach(key => {
             fieldObj[key] = props[key];
@@ -164,7 +165,7 @@ class CCDcaseField{
         return str
             .replace(/([a-z\d])([A-Z])/g, '$1 $2')
             .replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1 $2')
-            .toLowerCase(); 
+            .toLowerCase();
     }
 
 
