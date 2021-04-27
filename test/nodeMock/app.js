@@ -9,6 +9,7 @@ const CCDCaseConfig = require('./ccd/ccdCaseConfig/caseCreateConfigGenerator');
 const CCDCaseDetails = require('./ccd/ccdCaseConfig/caseDetailsConfigGenerator');
 
 const { getDLCaseConfig} = require('../ngIntegration/mockData/ccdCaseMock');
+const caseDetailsData  = require('./ccd/caseDetails_data');
 
 const port = 3001;
 
@@ -35,11 +36,11 @@ class MockApp{
         const app = express();
         app.use(bodyParser.urlencoded({ extended: false }));
         app.use(bodyParser.json());
-        app.use(express.json()); 
+        app.use(express.json());
 
         this.intercepts.forEach(intercept =>{
             app.use(intercept.url, intercept.callback);
-        }); 
+        });
 
         for (const [key, value] of Object.entries(this.conf.get)) {
             app.get(key, value);
@@ -74,26 +75,26 @@ class MockApp{
         }
     }
 
-   
+
     onGet(path, callback){
-        this.conf.get[path] = callback; 
+        this.conf.get[path] = callback;
     }
 
 
     onPost(path, callback){
-        this.conf.post[path] = callback; 
+        this.conf.post[path] = callback;
     }
 
     onPut(path, callback){
-        this.conf.put[path] = callback; 
+        this.conf.put[path] = callback;
     }
 
     onDelete(path, callback){
-        this.conf.delete[path] = callback; 
+        this.conf.delete[path] = callback;
     }
 
     setConfig(configKey,value){
-       this.configurations[configKey] = value; 
+       this.configurations[configKey] = value;
     }
 
 }
@@ -121,7 +122,6 @@ function setUpcaseConfig(caseConfig) {
     mockInstance.onGet('/data/internal/cases/:caseid', (req, res) => {
 
         let caseDetails = new CCDCaseDetails("Mock case");
-        console.log("event create called");
         caseDetails
         .addTab("MockCase Tab")
             .addFieldWithConfigToTab({
@@ -134,7 +134,7 @@ function setUpcaseConfig(caseConfig) {
                         { id:"text", type:"Text", label:"Text field 1"},
                         { id: "text2", type: "Text", label: "Text field 2" }
                     ]
-                        
+
                 },
                 props: { "display_context_parameter": "#TABLE(text)" },
                 value: [
@@ -148,8 +148,8 @@ function setUpcaseConfig(caseConfig) {
             setfieldprops({
                 show_condition: `textfield=\\"show\\"`
             })
-            
-        res.send(caseDetails.caseDetailsTemplate);
+
+        res.send(caseDetailsData);
     });
 
     // mockInstance.onPost('/data/case-types/:caseType/validate', (req, res) => {
