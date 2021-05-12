@@ -5,6 +5,7 @@ Dropdown = require('../pageObjects/webdriver-components/dropdown.js');
 TextField = require('../pageObjects/webdriver-components/textField.js');
 CustomError = require('../../utils/errors/custom-error.js');
 const { AMAZING_DELAY, SHORT_DELAY, MID_DELAY, LONG_DELAY } = require('../../support/constants');
+const {getCaseType,getJurisdiction} = require('../../config/appConfig');
 
 var {defineSupportCode} = require('cucumber');
 defineSupportCode(function ({And, But, Given, Then, When}) {
@@ -32,6 +33,8 @@ defineSupportCode(function ({And, But, Given, Then, When}) {
   });
 
   When('I enter search fields jurisdiction {string} case type {string}', async function (jurisdiction,caseType) {
+    jurisdiction = getJurisdiction(jurisdiction);
+    caseType = getCaseType(caseType);
     await searchPage.selectJurisdiction(jurisdiction);
     await searchPage.selectCaseType(caseType);
   });

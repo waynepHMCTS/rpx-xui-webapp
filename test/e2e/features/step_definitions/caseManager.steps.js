@@ -5,7 +5,7 @@ var ProbateCase = require('../pageObjects/ProbateCase');
 var DivorceCase = require('../pageObjects/Divorcecase');
 var IACCase = require('../pageObjects/iacCase'); 
 
-
+var {getCaseType,getJurisdiction} = require('../../config/appConfig');
 var CaseManager = require('../pageObjects/common/CaseManager');
 
 var { defineSupportCode } = require('cucumber');
@@ -23,6 +23,8 @@ defineSupportCode(function ({ And, But, Given, Then, When }) {
 
 
     When('I start case with jurisdiction {string} case type {string} and event {string}', async function (jurisidiction, casetype, event) {
+        jurisidiction = getJurisdiction(jurisidiction);
+        casetype = getCaseType(casetype);
         await caseManager.startCaseCreation(jurisidiction, casetype, event);
     });
 

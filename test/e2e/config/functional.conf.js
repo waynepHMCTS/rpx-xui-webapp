@@ -15,7 +15,7 @@ const jenkinsConfig = [
         browserName: 'chrome',
         acceptInsecureCerts: true,
         nogui: true,
-        chromeOptions: { args: ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-setuid-sandbox', '--no-zygote ', '--disableChecks'] }
+        chromeOptions: { args: ['--headless1', '--no-sandbox', '--disable-dev-shm-usage', '--disable-setuid-sandbox', '--no-zygote ', '--disableChecks'] }
     }
 ];
 
@@ -45,9 +45,9 @@ const config = {
     params: {
         serverUrls: process.env.TEST_URL || 'http://localhost:3000/',
         targetEnv: argv.env || 'local',
-        username: 'lukesuperuserxui@mailnesia.com',
+        username: 'peterxuisuperuser@mailnesia.com',
         password: 'Monday01',
-        caseworkerUser: 'mahesh_fr_courtadmn@mailinator.com',
+        caseworkerUser: 'peterxuisuperuser@mailnesia.com',
         caseworkerPassword: 'London01',
         fr_judge_username: process.env.FR_EMAIL,
         fr_judge_password: process.env.FR_PASSWORD,

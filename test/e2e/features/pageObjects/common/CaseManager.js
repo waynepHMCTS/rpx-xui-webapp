@@ -202,6 +202,7 @@ class CaseManager {
         var thisPageUrl = await browser.getCurrentUrl();
         cucumberReporter.AddMessage("Submitting page: " + thisPageUrl);
         console.log("Submitting : " + thisPageUrl )
+        await BrowserWaits.waitForSeconds(1);
         await continieElement.click();
         browser.waitForAngular();
         await BrowserWaits.waitForPageNavigation(thisPageUrl);
