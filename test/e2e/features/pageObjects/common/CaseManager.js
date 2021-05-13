@@ -176,6 +176,7 @@ class CaseManager {
             await this.caseEditPage.wizardPageFormFieldValidations(pageCounter);
         }
         var fields = element.all(by.css(this.formFields));
+        cucumberReporter.AddMessage("Fields count in page: " + await fields.count());
         for (let count = 0; count < await fields.count(); count++) {
             var isHidden = await fields.get(count).getAttribute("hidden");
             if (isHidden) {
@@ -192,20 +193,21 @@ class CaseManager {
         }
 
         var continieElement = element(by.xpath('//button[@type= "submit"]'));
+        var actionBtnsContainer = element(by.xpath('//button[@type= "submit"]/..'));
         await browser.executeScript('arguments[0].scrollIntoView()',
-            continieElement.getWebElement())
+            actionBtnsContainer.getWebElement())
 
         await BrowserWaits.waitForElement(continieElement);
-        browser.waitForAngular();
+        
         await BrowserWaits.waitForElementClickable(continieElement);
 
         var thisPageUrl = await browser.getCurrentUrl();
         cucumberReporter.AddMessage("Submitting page: " + thisPageUrl);
         console.log("Submitting : " + thisPageUrl )
-        await BrowserWaits.waitForSeconds(1);
-        await continieElement.click();
-        browser.waitForAngular();
-        await BrowserWaits.waitForPageNavigation(thisPageUrl);
+        //await BrowserWaits.waitForSeconds(5);
+        //await continieElement.click();
+        //browser.waitForAngular();
+        //await BrowserWaits.waitForPageNavigation(thisPageUrl);
 
         await BrowserWaits.retryWithActionCallback(async () => {
             await continieElement.click();
