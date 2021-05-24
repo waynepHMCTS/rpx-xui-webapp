@@ -62,3 +62,12 @@
       [attr.aria-hidden]="tasks?.length !== 0" cdk-footer-row *cdkFooterRowDef="['footer']"></tr>
 
 </table>
+
+<ccd-pagination 
+  (pageChange)="goToPage($event)"
+  [visibilityLabel]="hideRows ? 'hidden' : 'visible'" 
+  [autoHide]="true"
+  [maxSize]="tablePageSize"
+  [screenReaderPaginationLabel]="Pagination"
+  [screenReaderPageLabel]="page"
+  [screenReaderCurrentLabel]="'You\'re on page'"></ccd-pagination>

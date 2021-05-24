@@ -42,6 +42,9 @@ export class TaskListComponent implements OnChanges {
 
   private selectedTask: Task;
 
+  public hideRows: boolean;
+  public tablePageSize: number = 10;
+
   constructor(private readonly router: Router) {}
 
   public selectTaskFromUrlHash(url: string): Task | null {
@@ -175,4 +178,7 @@ export class TaskListComponent implements OnChanges {
     }
   }
 
+  public goToPage(page: number): void {
+
+  }
 }
