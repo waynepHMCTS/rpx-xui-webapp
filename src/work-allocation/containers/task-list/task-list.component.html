@@ -64,7 +64,7 @@
 </table>
 
 <ccd-pagination 
-  (pageChange)="goToPage($event)"
+  (pageChange)="onPaginationHandler($event)"
   [visibilityLabel]="hideRows ? 'hidden' : 'visible'" 
   [autoHide]="true"
   [maxSize]="tablePageSize"

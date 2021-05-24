@@ -31,6 +31,7 @@ export class TaskListComponent implements OnChanges {
   @Input() public fields: TaskFieldConfig[];
 
   @Output() public sortEvent = new EventEmitter<string>();
+  @Output() public paginationEvent = new EventEmitter<number>();
   @Output() public actionEvent = new EventEmitter<InvokedTaskAction>();
 
   /**
@@ -178,7 +179,7 @@ export class TaskListComponent implements OnChanges {
     }
   }
 
-  public goToPage(page: number): void {
-
+  public onPaginationHandler(page: number): void {
+    this.paginationEvent.emit(page);
   }
 }

@@ -2,5 +2,6 @@
 <exui-task-list
   [taskServiceConfig]="taskServiceConfig" [tasks]="tasks" [fields]="fields"
   [sortedBy]="sortedBy" [emptyMessage]="emptyMessage"
-  (sortEvent)="onSortHandler($event)" (actionEvent)="onActionHandler($event)">
+  (sortEvent)="onSortHandler($event)"
+  (paginationEvent)="onPaginationHandler($event)" (actionEvent)="onActionHandler($event)">
 </exui-task-list>
