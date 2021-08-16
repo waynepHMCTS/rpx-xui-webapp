@@ -10,7 +10,7 @@ import { TaskListWrapperComponent } from '../task-list-wrapper/task-list-wrapper
   selector: 'exui-my-tasks',
   templateUrl: 'my-tasks.component.html'
 })
-export class MyTasksComponent extends TaskListWrapperComponent implements OnInit {
+export class MyTasksComponent extends TaskListWrapperComponent {
 
   public get emptyMessage(): string {
     return ListConstants.EmptyMessage.MyTasks;
