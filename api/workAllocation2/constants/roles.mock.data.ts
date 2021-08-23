@@ -4,7 +4,7 @@ import { CaseRole } from '../interfaces/caseRole';
 export const CASEROLES: CaseRole[] = [
   {
     actions: [
-      {'id': 'reallocate', 'title': 'Reallocate'},
+      {'id': 'reallocate-role', 'title': 'Reallocate'},
       {'id': 'remove', 'title': 'Remove Allocation'},
     ],
     end: null,
@@ -16,7 +16,7 @@ export const CASEROLES: CaseRole[] = [
   },
   {
     actions: [
-      {'id': 'reallocate', 'title': 'Reallocate'},
+      {'id': 'reallocate-role', 'title': 'Reallocate'},
       {'id': 'remove', 'title': 'Remove Allocation'},
     ],
     end: null,

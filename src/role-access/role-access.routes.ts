@@ -44,6 +44,20 @@ export const ROUTES: Routes = [
       }
     ]
   },
+  {
+    path: 'reallocate-role',
+    component: AllocateRoleHomeComponent,
+    children: [
+      {
+        path: '',
+        component: null,
+        canActivate: [HealthCheckGuard],
+        data: {
+          title: 'HMCTS Manage cases | Role and access | Reallocate a role',
+        }
+      }
+    ]
+  },
 ];
 
 export const roleAccessRouting: ModuleWithProviders = RouterModule.forChild(ROUTES);

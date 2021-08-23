@@ -14,6 +14,7 @@ import {
 } from '../../../models';
 import { AnswerHeaderText, AnswerLabelText, RoleAllocationCaptionText } from '../../../models/enums';
 import * as fromFeature from '../../../store';
+import { isReallocateJourney } from '../../../utils';
 
 @Component({
   selector: 'exui-allocate-role-check-answers',
@@ -28,9 +29,9 @@ export class AllocateRoleCheckAnswersComponent implements OnInit, OnDestroy {
   public heading: AnswerHeaderText = AnswerHeaderText.CheckAnswers;
   public hint: AnswerHeaderText = AnswerHeaderText.CheckInformation;
   public storeSubscription: Subscription;
-  private allocateRoleStateData: AllocateRoleStateData;
   public typeOfRole: string;
   public allocateTo: AllocateTo;
+  private allocateRoleStateData: AllocateRoleStateData;
 
   constructor(private readonly store: Store<fromFeature.State>) {
   }
@@ -50,20 +51,42 @@ export class AllocateRoleCheckAnswersComponent implements OnInit, OnDestroy {
     }
   }
 
+  public onNavigate(action) {
+    this.store.dispatch(new fromFeature.AllocateRoleChangeNavigation(action));
+  }
+
+  public ngOnDestroy(): void {
+    if (this.storeSubscription) {
+      this.storeSubscription.unsubscribe();
+    }
+  }
+
   private setAnswersFromAllocateRoleStateStore(allocateRoleStateData: AllocateRoleStateData): void {
     this.allocateRoleStateData = allocateRoleStateData;
     this.typeOfRole = allocateRoleStateData.typeOfRole;
     this.allocateTo = allocateRoleStateData.allocateTo;
     if (this.typeOfRole === TypeOfRole.CASE_MANAGER) {
-      this.caption = RoleAllocationCaptionText.LegalOpsAllocate;
+      this.caption = isReallocateJourney(window.location.pathname) ?
+        RoleAllocationCaptionText.LegalOpsReAllocateChoose :
+        RoleAllocationCaptionText.LegalOpsAllocate;
     } else {
       if (this.typeOfRole) {
-        this.caption = `Allocate a ${this.typeOfRole.toLowerCase()}`;
+        this.caption = isReallocateJourney(window.location.pathname) ?
+          `Reallocate a ${this.typeOfRole.toLowerCase()}` :
+          `Allocate a ${this.typeOfRole.toLowerCase()}`;
       }
     }
     this.answers = [];
-    this.answers.push({ label: AnswerLabelText.TypeOfRole, value: allocateRoleStateData.typeOfRole, action: AllocateRoleState.CHOOSE_ROLE });
-    this.answers.push({ label: AnswerLabelText.WhoBeAllocatedTo, value: allocateRoleStateData.allocateTo, action: AllocateRoleState.CHOOSE_ALLOCATE_TO });
+    this.answers.push({
+      label: AnswerLabelText.TypeOfRole,
+      value: allocateRoleStateData.typeOfRole,
+      action: AllocateRoleState.CHOOSE_ROLE
+    });
+    this.answers.push({
+      label: AnswerLabelText.WhoBeAllocatedTo,
+      value: allocateRoleStateData.allocateTo,
+      action: AllocateRoleState.CHOOSE_ALLOCATE_TO
+    });
     this.setPersonDetails(allocateRoleStateData);
     this.setDurationOfRole(allocateRoleStateData);
   }
@@ -91,15 +114,5 @@ export class AllocateRoleCheckAnswersComponent implements OnInit, OnDestroy {
       durationOfRole = `${startDate} to ${endDate}`;
     }
     this.answers.push({label: AnswerLabelText.DurationOfRole, value: durationOfRole, action: AllocateRoleState.CHOOSE_DURATION});
-  }
-
-  public onNavigate(action) {
-    this.store.dispatch(new fromFeature.AllocateRoleChangeNavigation(action));
-  }
-
-  public ngOnDestroy(): void {
-    if (this.storeSubscription) {
-      this.storeSubscription.unsubscribe();
-    }
   }
 }

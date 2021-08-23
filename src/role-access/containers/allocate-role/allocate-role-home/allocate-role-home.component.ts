@@ -14,6 +14,7 @@ import {
 } from '../../../constants/allocate-role-page-visibility-states';
 import { AllocateRoleNavigation, AllocateRoleNavigationEvent, AllocateRoleState, AllocateTo } from '../../../models';
 import * as fromFeature from '../../../store';
+import { isReallocateJourney } from '../../../utils';
 import { AllocateRoleCheckAnswersComponent } from '../allocate-role-check-answers/allocate-role-check-answers.component';
 import { AllocateRoleSearchPersonComponent } from '../allocate-role-search-person/allocate-role-search-person.component';
 import { ChooseAllocateToComponent } from '../choose-allocate-to/choose-allocate-to.component';
@@ -72,6 +73,10 @@ export class AllocateRoleHomeComponent implements OnInit, OnDestroy {
         this.isLegalOpsOrJudicialRole = AppUtils.isLegalOpsOrJudicial(userDetails.userInfo.roles);
       }
     );
+
+    if (isReallocateJourney(window.location.pathname)) {
+      this.store.dispatch(new fromFeature.AllocateRoleChangeNavigation(AllocateRoleState.SEARCH_PERSON));
+    }
     this.allocateRoleStateDataSub = this.store.pipe(select(fromFeature.getAllocateRoleState)).subscribe(
       allocateRoleStateData => {
         this.navigationCurrentState = allocateRoleStateData.state;
@@ -136,7 +141,7 @@ export class AllocateRoleHomeComponent implements OnInit, OnDestroy {
             this.store.dispatch(new fromFeature.AllocateRoleChangeNavigation(AllocateRoleState.CHOOSE_DURATION));
             break;
           default:
-          throw new Error('Invalid allocation state');
+            throw new Error('Invalid allocation state');
         }
         break;
       }

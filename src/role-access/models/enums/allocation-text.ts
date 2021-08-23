@@ -9,8 +9,11 @@ export enum RoleAllocationCaptionText {
   Exclusion = 'Add an exclusion',
   JudiciaryAllocate = 'Allocate a hearing judge',
   JudiciaryChoose = 'Allocate a judicial role',
+  JudiciaryReallocateChoose = 'Reallocate a judicial role',
   LegalOpsAllocate = 'Allocate a legal ops case manager',
-  LegalOpsChoose = 'Allocate a legal ops role'
+  LegalOpsReAllocate = 'Reallocate a legal ops case manager',
+  LegalOpsChoose = 'Allocate a legal ops role',
+  LegalOpsReAllocateChoose = 'Reallocate a legal ops role'
 }
 
 // Leaving this in as reference to text required for judicial/legal ops stories

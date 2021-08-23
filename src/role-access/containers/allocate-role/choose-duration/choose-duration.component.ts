@@ -4,6 +4,7 @@ import { select, Store } from '@ngrx/store';
 import * as moment from 'moment';
 import { AllocateRoleNavigation, AllocateRoleNavigationEvent, AllocateRoleState, AllocateRoleStateData, DurationOfRole, Period } from '../../../models';
 import * as fromFeature from '../../../store';
+import { isReallocateJourney } from '../../../utils';
 
 @Component({
   selector: 'exui-choose-duration',
@@ -53,7 +54,7 @@ export class ChooseDurationComponent implements OnInit {
    }
 
   public ngOnInit(): void {
-    this.title = 'Allocate a hearing judge';
+    this.title = isReallocateJourney(window.location.pathname) ? 'Reallocate a hearing judge' : 'Allocate a hearing judge';
     this.formGroup = this.builder.group({
       dayStartDate: this.dayStartDate,
       monthStartDate: this.monthStartDate,
